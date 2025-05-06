@@ -1,0 +1,1997 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+    <title>LFVN - Loan</title>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/toas.css" />
+    <link rel="stylesheet" href="css/otp.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-55833HQN');</script>
+    <!-- End Google Tag Manager -->
+</head>
+
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-55833HQN"
+                      height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="images/logo-nav.png" alt="Logo">
+            </a>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarScroll">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link fw-bold" href="#offers">Các gói vay</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fw-bold" href="#cards">Quy trình vay</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fw-bold" href="#customers">Khách hàng</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fw-bold" href="#abouts">Về chúng tôi</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fw-bold" href="#qa">Q&A</a>
+                    </li>
+                </ul>
+                <div class="d-flex btn-register">
+                    <a class="btn-card_regist" id="btn-header-regist">ĐĂNG KÝ NGAY</a>
+                </div>
+            </div>
+            <div class="d-flex btn-register-">
+                <a class="btn-card_regist-mobile" id="btn-header-regist-mobile">ĐĂNG KÝ NGAY</a>
+            </div>
+        </div>
+    </nav>
+    <section class="banner">
+        <div id="banner-form-web">
+            <div class="row">
+                <div class="col-md-6">
+                </div>
+                <div class="col-md-6 form-container">
+                    <div class="form-body">
+                        <form class="p-3" id="form-submit">
+                            <div class=" text-center mb-4">
+                                <h1 class="regist-form_content__title">ĐĂNG KÝ KHOẢN VAY</h1>
+                            </div>
+                            <div class="mb-2">
+                                <label for="exampleFormControlInput1" class="form-label">Họ &amp; Tên</label> <span
+                                    style="color: rgb(231, 37, 43);">*</span>
+                                <input type="text" name="name" placeholder="Nhập họ và tên" class="form-control"
+                                    id="exampleFormControlInput1">
+                            </div>
+                            <div class="mb-2">
+                                <label for="exampleFormControlInput1" class="form-label">Số điện thoại</label> <span
+                                    style="color: rgb(231, 37, 43);">*</span>
+                                <input type="text" name="phone" placeholder="Nhập số điện thoại" class="form-control"
+                                    id="phoneInput">
+                            </div>
+                            <div class="mb-2">
+                                <label for="exampleFormControlInput1" class="form-label">CMND/CCCD</label> <span
+                                    style="color: rgb(231, 37, 43);">*</span>
+                                <input type="text" name="idCard" placeholder="Nhập CCCD (12 số)" class="form-control"
+                                    id="exampleFormControlInput1">
+                            </div>
+                            <div class="mb-2 " style="font-size: 12px;">
+                                <p>Bằng việc tiếp tục, Tôi đồng ý để LOTTE Finance xử lý dữ liệu <svg id="policy-info"
+                                        style="color: lightskyblue;" xmlns="http://www.w3.org/2000/svg" width="16"
+                                        height="16" fill="currentColor" class="bi bi-info-circle" viewBox="0 0 16 16">
+                                        <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16">
+                                        </path>
+                                        <path
+                                            d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0">
+                                        </path>
+                                    </svg></p>
+                            </div>
+                            <div class=" form-check">
+                                <input type="checkbox" name="i_agree_terms_and_conditions" class="form-check-input"
+                                    id="exampleCheck1">
+                                <label class="form-check-label" for="exampleCheck1">
+                                    <span data-checked="false">Tôi đồng
+                                        ý với</span><a
+                                        href="https://www.lottefinance.vn/web/service/customer/termAndCond/userDataPolicies?csrt=11640075599545901093"
+                                        target="_blank"
+                                        style="color: red;"> Điều khoản Xử lý dữ liệu cá nhân</a>
+                                    <a> và </a>
+                                    <a
+                                            href="https://www.lottefinance.vn/web/service/customer/termAndCond/loanTnC?csrt=11640075599545901093"
+                                            target="_blank"
+                                            style="color: red;"> Điều khoản Giao dịch</a>
+                                </label>
+                            </div>
+                            <div class="text-center mt-2">
+                                <button class="btn button-gardient mb-4 form-control" type="button" id="btn-submit">
+                                    Đăng ký ngay
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="register">
+        <div class="row p-4">
+            <div class="form-register">
+                <form class="p-3" id="form-submit-mobile">
+                    <div class=" text-center mb-4">
+                        <h1 class="regist-form_content__title">ĐĂNG KÝ KHOẢN VAY</h1>
+                    </div>
+                    <div class="mb-2">
+                        <label for="exampleFormControlInput1" class="form-label">Họ &amp; Tên</label> <span
+                            style="color: rgb(231, 37, 43);">*</span>
+                        <input type="text" name="name" placeholder="Nhập họ và tên" class="form-control"
+                               id="exampleFormControlInput1">
+                    </div>
+                    <div class="mb-2">
+                        <label for="exampleFormControlInput1" class="form-label">Số điện thoại</label> <span
+                            style="color: rgb(231, 37, 43);">*</span>
+                        <input type="text" name="phone" placeholder="Nhập số điện thoại" class="form-control"
+                               id="phoneInput">
+                    </div>
+                    <div class="mb-2">
+                        <label for="exampleFormControlInput1" class="form-label">CMND/CCCD</label> <span
+                            style="color: rgb(231, 37, 43);">*</span>
+                        <input type="text" name="idCard" placeholder="Nhập CCCD (12 số)" class="form-control"
+                               id="exampleFormControlInput1">
+                    </div>
+                    <div class="mb-2 " style="font-size: 12px;">
+                        <p>Bằng việc tiếp tục, Tôi đồng ý để LOTTE Finance xử lý dữ liệu <svg id="policy-info"
+                                                                                              style="color: lightskyblue;" xmlns="http://www.w3.org/2000/svg" width="16"
+                                                                                              height="16" fill="currentColor" class="bi bi-info-circle" viewBox="0 0 16 16">
+                            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16">
+                            </path>
+                            <path
+                                    d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0">
+                            </path>
+                        </svg></p>
+                    </div>
+                    <div class=" form-check">
+                        <input type="checkbox" name="i_agree_terms_and_conditions" class="form-check-input"
+                               id="exampleCheck1">
+                        <label class="form-check-label" for="exampleCheck1">
+                            <span data-checked="false">Tôi đồng
+                                        ý với</span><a
+                                href="https://www.lottefinance.vn/web/service/customer/termAndCond/userDataPolicies?csrt=11640075599545901093"
+                                target="_blank"
+                                style="color: red;"> Điều khoản Xử lý dữ liệu cá nhân</a>
+                            <a> và </a>
+                            <a
+                                    href="https://www.lottefinance.vn/web/service/customer/termAndCond/loanTnC?csrt=11640075599545901093"
+                                    target="_blank"
+                                    style="color: red;"> Điều khoản Giao dịch</a>
+                        </label>
+                    </div>
+                    <div class="text-center mt-2">
+                        <button class="btn button-gardient mb-4 form-control" type="button" id="btn-submit-mobile">
+                            Đăng ký ngay
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+    <section class="loan-simulate">
+        <div class="bg-loan-simulate"></div>
+        <div class="container loan-simulate-body shadow mt-4">
+            <div class="row p-4">
+                <div class="col-md-6">
+                    <h3>Ước tính khoản vay</h3>
+                    <div class="loan-simulate-amount">
+                        <div class="row">
+                            <div class="col-md-6 col-sm-6">
+                                <strong for="customRange1" class="form-label">Số tiền vay (VND)</strong>
+                            </div>
+                            <div class="col-md-6 col-sm-6">
+                                <p id="amount-rate-body">
+                                    <span id="amount-rate-result" class="text-sm font-medium">255.000.000</span>
+                                    <span class="text-gray-400">VND</span>
+                                </p>
+                            </div>
+                            <div class="col-md-12">
+                                <input id="amount-rate" type="range" min="10000000" max="500000000" step="5000000"
+                                    class="form-range">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 col-6 m-0 loan-estimate">
+                                <p class="m-0">Tối thiểu</p>
+                            </div>
+                            <div class="col-md-6 col-6 m-0 text-end loan-estimate">
+                                <p class="m-0">Tối đa</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 col-6 m-0 loan-estimate">
+                                <p class="m-0">10.000.000 VND</p>
+                            </div>
+                            <div class="col-md-6 col-6 m-0 text-end loan-estimate">
+                                <p class="m-0">500.000.000 VND</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="loan-simulate-tenor mt-3">
+                        <div class="row">
+                            <div class="col-md-6 col-6 col-sm-6">
+                                <strong for="customRange1" class="form-label">Thời gian vay (tháng)</strong>
+                            </div>
+                            <div class="col-md-6 col-6 col-sm-6">
+                                <p id="month-rate-body">
+                                    <span id="month-rate-result" class="text-sm font-medium">12</span>
+                                    <span class="text-gray-400">tháng</span>
+                                </p>
+                            </div>
+                            <div class="col-md-12">
+                                <input id="month-rate" type="range" min="6" max="60" class="form-range">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 col-6 m-0 loan-estimate">
+                                <p class="m-0">Tối thiểu</p>
+                            </div>
+                            <div class="col-md-6 col-6 m-0 text-end loan-estimate">
+                                <p class="m-0">Tối đa</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 col-6 m-0 loan-estimate">
+                                <p class="m-0">6 tháng</p>
+                            </div>
+                            <div class="col-md-6 col-6 m-0 text-end loan-estimate">
+                                <p class="m-0">60 tháng</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-md-6 text-center">
+                    <div class="loan-simulate-right">
+                        <h5>Số tiền phải trả hàng tháng</h5>
+                        <p id="amount-total">23.378.000 VND</p>
+                        <p id="amount-total-warning" class="pt-4">
+                            <span>
+                                Lưu ý*:
+                            </span>
+                            <span>
+                                Kết quả tính toán này chỉ mang tính chất tham khảo và có thể sai lệch nhỏ với kết quả
+                                tính toán thực tế
+                            </span>
+                        </p>
+                        <button class="btn-card_regist mb-4 mt-4" id="btn-card_regist">
+                            Đăng ký ngay <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                fill="currentColor" class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8">
+                                </path>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12 col-sm-12 p-4 btn-detail">
+                <p>
+                    <a class="toggle-text" data-bs-toggle="collapse" href="#collapseExample" role="button"
+                        aria-expanded="false" aria-controls="collapseExample">
+                        Chi tiết lãi suất và ví dụ <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708" />
+                            </svg></span>
+                    </a>
+                </p>
+                <div class="collapse row" id="collapseExample">
+                    <div class="col-md-5 col-sm-12">
+                        <p class="text-red"><strong>Lãi suất minh hoạ</strong></p>
+                        <ul>
+                            <li>18%/năm (tính trên dư nợ giảm dần)</li>
+                            <li>Giá trị khoản vay: từ 10 triệu – 500 triệu đồng</li>
+                            <li>Thời gian vay: từ 06 tháng - 60 tháng
+
+                                <ul>
+                                    <li>18%/năm (tính trên dư nợ giảm dần)</li>
+                                    <li>Giá trị khoản vay: từ 10 triệu – 300 triệu đồng</li>
+                                    <li>Thời gian vay: từ 06 tháng - 60 tháng</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-md-2"></div>
+                    <div class="col-md-5 col-sm-12">
+                        <p><strong class="text-red">Ví dụ:</strong></p>
+                        <p>Với khoản vay tiêu dùng 10 triệu đồng, thời hạn vay 12 tháng, lãi suất 18%/ năm tính trên dư
+                            nợ giảm dần (tương đương 10 %/năm lãi suất tính trên dư nợ ban đầu).
+                            Với các phương thức thanh toán nợ gốc, lãi hàng tháng, số tiền hàng tháng phải trả là
+                            917.000 VND. Trong đó:</p>
+                        <ul style="position: relative;top: -16px;">
+                            <li>Lãi suất mỗi tháng là: 83.333 VND</li>
+                            <li>Số tiền nợ gốc mỗi tháng là: 833.667 VND</li>
+                            <li>Chi phí vay: 0 VND</li>
+                        </ul>
+                        <p style="position: relative;top: -30px;">Như vậy, tổng số tiền phải thanh toán bao gồm tiền nợ gốc và lãi là 11.000.000 VND</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="loan-product-mobile" >
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 col-xs-12 col-sm-12">
+                    <p class="section-title">Các gói vay ưu đãi</p>
+                    <hr class="section-title_line">
+                </div>
+                <div id="loan-product-control" class="carousel" data-bs-ride="carousel">
+                    <div class="carousel-inner-cus">
+                        <div class="carousel-item active">
+                            <div class="row">
+                                <div class="col-md-4 mr-1">
+                                    <div class="card mb-4 position-relative card-cong-nhan"
+                                         style="border: none; border-radius: 55px;">
+                                        <div class="card-body pt-0 pb-0" style="margin-top: 20em;">
+                                            <h4 class="fw-bold">Cho vay khách hàng
+                                                có nguồn thu nhập từ lương</h4>
+                                        </div>
+
+                                        <div class="px-3">
+                                            Khách hàng là công nhân, đang làm việc chính thức tại các công ty với thu
+                                            nhập chỉ từ 4
+                                            triệu đồng đã có thể vay với lãi suất hấp dẫn
+                                        </div>
+                                        <div class="row mx-3 mt-2">
+                                            <div class="col-md-6 col-sm-6 col-6 card-border-left">
+                                                <span>Số tiền vay (tối đa)</span>
+                                                <span class="fw-bold text-red font-title-card-mobile">300 triệu</span>
+                                            </div>
+                                            <div class="col-md-6 col-sm-6 col-6 card-border-right">
+                                                <span>Lãi suất (tạm tính) *</span>
+                                                <span class="fw-bold text-red font-title-card-mobile">0.83% </span><span
+                                                    class="fw-bold font-title-card-mobile">/tháng</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="px-3 mb-2 mt-3 center-button">
+                                            <button class="btn-card_regist-loan-product-mobile mb-4" id="btn-lotte_premium">
+                                                Đăng ký ngay <svg xmlns="http://www.w3.org/2000/svg" width="20"
+                                                                  height="20" fill="currentColor" class="bi bi-arrow-right-short"
+                                                                  viewBox="0 0 16 16">
+                                                <path fill-rule="evenodd"
+                                                      d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8">
+                                                </path>
+                                            </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="row">
+                                <div class="col-md-4 mr-1">
+                                    <div class="card mb-4 position-relative card-kh-nha-nuoc"
+                                         style="border: none; border-radius: 55px;">
+
+                                        <div class="card-body pt-0 pb-0" style="margin-top: 20em;">
+                                            <h4 class="fw-bold text-red">Cho vay khách hàng là cán bộ công chức, viên
+                                                chức</h4>
+                                        </div>
+
+                                        <div class="px-3">
+                                            Dành cho Khách hàng là cán bộ, công chức, viên chức.... Nhà nước với thu
+                                            nhập chỉ từ 3 triệu
+                                            đồng
+                                        </div>
+                                        <div class="row mx-3 mt-2">
+                                            <div class="col-md-6 col-sm-6 col-6 card-border-left">
+                                                <span>Số tiền vay (tối đa)</span>
+                                                <span class="fw-bold text-red font-title-card-mobile">500 triệu</span>
+                                            </div>
+                                            <div class="col-md-6 col-sm-6 col-6 card-border-right">
+                                                <span>Lãi suất (tạm tính) *</span>
+                                                <span class="fw-bold text-red font-title-card-mobile">1.03% </span><span
+                                                    class="fw-bold font-title-card-mobile">/tháng</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="px-3 mb-2 mt-3 center-button">
+                                            <button class="btn-card_regist-loan-product-mobile mb-4" id="btn-lotte_premium">
+                                                Đăng ký ngay <svg xmlns="http://www.w3.org/2000/svg" width="20"
+                                                                  height="20" fill="currentColor" class="bi bi-arrow-right-short"
+                                                                  viewBox="0 0 16 16">
+                                                <path fill-rule="evenodd"
+                                                      d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8">
+                                                </path>
+                                            </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="card mb-4 position-relative card-kh-phu-nu"
+                                         style="border: none; border-radius: 55px;">
+
+                                        <div class="card-body pt-0 pb-0" style="margin-top: 20em;">
+                                            <h4 class="fw-bold text-red">Cho vay khách hàng là phụ nữ </h4>
+                                        </div>
+
+                                        <div class="px-3">
+                                            Chỉ cần có thu nhập từ 3 triệu đồng, khách hàng/ chồng khách hàng sở hữu
+                                            đăng ký xe máy có
+                                            thể vay với lãi suất ưu đãi
+                                        </div>
+                                        <div class="row mx-3 mt-2">
+
+                                            <div class="col-md-6 col-sm-6 col-6 card-border-left">
+                                                <span>Số tiền vay (tối đa)</span>
+                                                <span class="fw-bold text-red font-title-card-mobile">50 triệu</span>
+                                            </div>
+                                            <div class="col-md-6 col-sm-6 col-6 card-border-right">
+                                                <span>Lãi suất (tạm tính) *</span>
+                                                <span class="fw-bold text-red font-title-card-mobile">2.09% </span><span
+                                                    class="fw-bold font-title-card-mobile">/tháng</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="px-3 mb-2 mt-3 center-button">
+                                            <button class="btn-card_regist-loan-product-mobile mb-4" id="btn-lotte_premium">
+                                                Đăng ký ngay <svg xmlns="http://www.w3.org/2000/svg" width="20"
+                                                                  height="20" fill="currentColor" class="bi bi-arrow-right-short"
+                                                                  viewBox="0 0 16 16">
+                                                <path fill-rule="evenodd"
+                                                      d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8">
+                                                </path>
+                                            </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="row">
+                                <div class="col-md-4 mr-1">
+                                    <div class="card mb-4 position-relative card-kh-bhnt"
+                                         style="border: none; border-radius: 55px;">
+                                        <div class="card-body pt-0 pb-0" style="margin-top: 20em;">
+                                            <h4 class="fw-bold text-red">Cho vay khách hàng
+                                                có hợp đồng bảo hiểm nhân thọ</h4>
+                                        </div>
+
+                                        <div class="px-3">
+                                            Dành cho Khách hàng hoặc vợ/chồng KH có hợp đồng bảo hiểm nhân thọ, đóng phí
+                                            từ 5 triệu
+                                            đồng/năm với thủ tục đơn giản, nhanh chóng
+                                        </div>
+                                        <div class="row mx-3 mt-2">
+                                            <div class="col-md-6 col-sm-6 col-6 card-border-left">
+                                                <span>Số tiền vay (tối đa)</span>
+                                                <span class="fw-bold text-red font-title-card-mobile">100 triệu</span>
+                                            </div>
+                                            <div class="col-md-6 col-sm-6 col-6 card-border-right">
+                                                <span>Lãi suất (tạm tính) *</span>
+                                                <span class="fw-bold text-red font-title-card-mobile">1.92% </span><span
+                                                    class="fw-bold font-title-card-mobile">/tháng</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="px-3 mb-2 mt-3 center-button">
+                                            <button class="btn-card_regist-loan-product-mobile mb-4" id="btn-lotte_premium">
+                                                Đăng ký ngay <svg xmlns="http://www.w3.org/2000/svg" width="20"
+                                                                  height="20" fill="currentColor" class="bi bi-arrow-right-short"
+                                                                  viewBox="0 0 16 16">
+                                                <path fill-rule="evenodd"
+                                                      d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8">
+                                                </path>
+                                            </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="row">
+                                <div class="col-md-4 mr-1">
+                                    <div class="card mb-4 position-relative card-kh-tctd"
+                                         style="border: none; border-radius: 55px;">
+
+                                        <div class="card-body pt-0 pb-0" style="margin-top: 20em;">
+                                            <h4 class="fw-bold text-red">Cho vay khách hàng có lịch sử vay tại các tổ
+                                                chức tín dụng
+                                            </h4>
+                                        </div>
+
+                                        <div class="px-3">
+                                            Giải ngân trực tiếp, thủ tục nhanh gọn cho Khách hàng có khoản vay và lịch
+                                            sử trả nợ tốt tại
+                                            Công ty tài chính khác hoặc Ngân hàng, và thu nhập chỉ từ 3 triệu đồng
+                                        </div>
+                                        <div class="row mx-3 mt-2">
+                                            <div class="col-md-6 col-sm-6 col-6 card-border-left">
+                                                <span>Số tiền vay (tối đa)</span>
+                                                <span class="fw-bold text-red font-title-card-mobile">100 triệu</span>
+                                            </div>
+                                            <div class="col-md-6 col-sm-6 col-6 card-border-right">
+                                                <span>Lãi suất (tạm tính) *</span>
+                                                <span class="fw-bold text-red font-title-card-mobile">1.98% </span><span
+                                                    class="fw-bold font-title-card-mobile">/tháng</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="px-3 mb-2 mt-3 center-button">
+                                            <button class="btn-card_regist-loan-product-mobile mb-4" id="btn-lotte_premium">
+                                                Đăng ký ngay <svg xmlns="http://www.w3.org/2000/svg" width="20"
+                                                                  height="20" fill="currentColor" class="bi bi-arrow-right-short"
+                                                                  viewBox="0 0 16 16">
+                                                <path fill-rule="evenodd"
+                                                      d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8">
+                                                </path>
+                                            </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="card mb-4 position-relative card-kh-chukinhdoanh"
+                                         style="border: none; border-radius: 55px;">
+
+                                        <div class="card-body pt-0 pb-0" style="margin-top: 20em;">
+                                            <h4 class="fw-bold text-red">Cho vay khách hàng
+                                                là chủ kinh doanh</h4>
+                                        </div>
+
+                                        <div class="px-3">
+                                            Khách hàng là công nhân, đang làm việc chính thức tại các công ty với thu
+                                            nhập chỉ từ 4
+                                            triệu đồng đã có thể vay với lãi suất hấp dẫn
+                                        </div>
+                                        <div class="row mx-3 mt-2">
+                                            <div class="col-md-6 col-sm-6 col-6 card-border-left">
+                                                <span>Số tiền vay (tối đa)</span>
+                                                <span class="fw-bold text-red font-title-card-mobile">40 triệu</span>
+                                            </div>
+                                            <div class="col-md-6 col-sm-6 col-6 card-border-right">
+                                                <span>Thời gian vay tối đa</span>
+                                                <span class="fw-bold text-red font-title-card-mobile">24 </span><span
+                                                    class="fw-bold font-title-card-mobile   ">tháng</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="px-3 mb-2 mt-3 center-button">
+                                            <button class="btn-card_regist-loan-product-mobile mb-4" id="btn-lotte_premium">
+                                                Đăng ký ngay <svg xmlns="http://www.w3.org/2000/svg" width="20"
+                                                                  height="20" fill="currentColor" class="bi bi-arrow-right-short"
+                                                                  viewBox="0 0 16 16">
+                                                <path fill-rule="evenodd"
+                                                      d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8">
+                                                </path>
+                                            </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#loan-product-control"
+                            data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#loan-product-control"
+                            data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"> </span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="loan-product mt-5" id="offers">
+        <div class="loan-product-bg"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 col-xs-12 col-sm-12">
+                    <p class="section-title">Các gói vay ưu đãi</p>
+                    <hr class="section-title_line">
+                </div>
+                <div class="col-md-4 mr-1">
+                    <div class="card mb-4 position-relative card-cong-nhan" style="border: none; border-radius: 55px;">
+                        <div class="card-body pt-0 pb-0" style="margin-top: 20em;">
+                            <h4 class="fw-bold">Cho vay khách hàng
+                                có nguồn thu nhập từ lương</h4>
+                        </div>
+
+                        <div class="px-3">
+                            Khách hàng là công nhân, đang làm việc chính thức tại các công ty với thu nhập chỉ từ 4
+                            triệu đồng đã có thể vay với lãi suất hấp dẫn
+                        </div>
+                        <div class="row mx-3 mt-2">
+                            <div class="col-md-6 col-sm-6 col-6 card-border-left">
+                                <span>Số tiền vay (tối đa)</span>
+                                <span class="fw-bold text-red font-title-card">300 triệu </span>
+                            </div>
+                            <div class="col-md-6 col-sm-6 col-6 card-border-right">
+                                <span>Lãi suất (tạm tính) *</span>
+                                <span class="fw-bold text-red font-title-card">0.83% </span><span
+                                    class="fw-bold font-title-card">/tháng</span>
+                            </div>
+                        </div>
+
+                        <div class="px-3 mb-2 mt-3">
+                            <button class="btn-card_regist-loan-product mb-4" id="btn-lotte_premium">
+                                Đăng ký ngay <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                    fill="currentColor" class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd"
+                                        d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8">
+                                    </path>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mr-1">
+                    <div class="card mb-4 position-relative card-kh-nha-nuoc"
+                        style="border: none; border-radius: 55px;">
+
+                        <div class="card-body pt-0 pb-0" style="margin-top: 20em;">
+                            <h4 class="fw-bold text-red">Cho vay khách hàng là cán bộ công chức, viên chức</h4>
+                        </div>
+
+                        <div class="px-3">
+                            Dành cho Khách hàng là cán bộ, công chức, viên chức.... Nhà nước với thu nhập chỉ từ 3 triệu
+                            đồng
+                        </div>
+                        <div class="row mx-3 mt-2">
+                            <div class="col-md-6 col-sm-6 col-6 card-border-left">
+                                <span>Số tiền vay (tối đa)</span>
+                                <span class="fw-bold text-red font-title-card">500 triệu</span>
+                            </div>
+                            <div class="col-md-6 col-sm-6 col-6 card-border-right">
+                                <span>Lãi suất (tạm tính) *</span>
+                                <span class="fw-bold text-red font-title-card">1.03% </span><span
+                                    class="fw-bold font-title-card">/tháng</span>
+                            </div>
+                        </div>
+
+                        <div class="px-3 mb-2 mt-3">
+                            <button class="btn-card_regist-loan-product mb-4" id="btn-lotte_premium">
+                                Đăng ký ngay <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                    fill="currentColor" class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd"
+                                        d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8">
+                                    </path>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card mb-4 position-relative card-kh-phu-nu" style="border: none; border-radius: 55px;">
+
+                        <div class="card-body pt-0 pb-0" style="margin-top: 20em;">
+                            <h4 class="fw-bold text-red">Cho vay khách hàng là phụ nữ </h4>
+                        </div>
+
+                        <div class="px-3">
+                            Chỉ cần có thu nhập từ 3 triệu đồng, khách hàng/ chồng khách hàng sở hữu đăng ký xe máy có
+                            thể vay với lãi suất ưu đãi
+                        </div>
+                        <div class="row mx-3 mt-2">
+
+                            <div class="col-md-6 col-sm-6 col-6 card-border-left">
+                                <span>Số tiền vay (tối đa)</span>
+                                <br>
+                                <span class="fw-bold text-red font-title-card">50 triệu</span>
+                            </div>
+                            <div class="col-md-6 col-sm-6 col-6 card-border-right">
+                                <span>Lãi suất (tạm tính) *</span>
+                                <span class="fw-bold text-red font-title-card">2.09% </span><span
+                                    class="fw-bold font-title-card">/tháng</span>
+                            </div>
+                        </div>
+
+                        <div class="px-3 mb-2 mt-3">
+                            <button class="btn-card_regist-loan-product mb-4" id="btn-lotte_premium">
+                                Đăng ký ngay <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                    fill="currentColor" class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd"
+                                        d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8">
+                                    </path>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="row">
+                <div class="col-md-12 col-sm-12 col-xs-12">
+                    <p>
+                        <a class="toggle-text" data-bs-toggle="collapse" href="#collapseLoan" role="button"
+                            aria-expanded="false" aria-controls="collapseLoan">
+                            Xem thêm các gói vay khác <span><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                                    height="16" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd"
+                                        d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708" />
+                                </svg></span>
+                        </a>
+                    </p>
+                </div>
+            </div>
+            <div class="collapse row" id="collapseLoan">
+                <div class="col-md-4 mr-1">
+                    <div class="card mb-4 position-relative card-kh-bhnt" style="border: none; border-radius: 55px;">
+                        <div class="card-body pt-0 pb-0" style="margin-top: 20em;">
+                            <h4 class="fw-bold text-red">Cho vay khách hàng
+                                có hợp đồng bảo hiểm nhân thọ</h4>
+                        </div>
+
+                        <div class="px-3">
+                            Dành cho Khách hàng hoặc vợ/chồng KH có hợp đồng bảo hiểm nhân thọ, đóng phí từ 5 triệu
+                            đồng/năm với thủ tục đơn giản, nhanh chóng
+                        </div>
+                        <div class="row mx-3 mt-2">
+                            <div class="col-md-6 col-sm-6 col-6 card-border-left">
+                                <span>Số tiền vay (tối đa)</span>
+                                <span class="fw-bold text-red font-title-card">100 triệu</span>
+                            </div>
+                            <div class="col-md-6 col-sm-6 col-6 card-border-right">
+                                <span>Lãi suất (tạm tính) *</span>
+                                <span class="fw-bold text-red font-title-card">1.92% </span><span
+                                    class="fw-bold font-title-card">/tháng</span>
+                            </div>
+                        </div>
+
+                        <div class="px-3 mb-2 mt-3">
+                            <button class="btn-card_regist-loan-product mb-4" id="btn-lotte_premium">
+                                Đăng ký ngay <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                    fill="currentColor" class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd"
+                                        d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8">
+                                    </path>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mr-1">
+                    <div class="card mb-4 position-relative card-kh-tctd" style="border: none; border-radius: 55px;">
+
+                        <div class="card-body pt-0 pb-0" style="margin-top: 20em;">
+                            <h4 class="fw-bold text-red">Cho vay khách hàng có lịch sử vay tại các tổ chức tín dụng
+                            </h4>
+                        </div>
+
+                        <div class="px-3">
+                            Giải ngân trực tiếp, thủ tục nhanh gọn cho Khách hàng có khoản vay và lịch sử trả nợ tốt tại
+                            Công ty tài chính khác hoặc Ngân hàng, và thu nhập chỉ từ 3 triệu đồng
+                        </div>
+                        <div class="row mx-3 mt-2">
+                            <div class="col-md-6 col-sm-6 col-6 card-border-left">
+                                <span>Số tiền vay (tối đa)</span>
+                                <span class="fw-bold text-red font-title-card">100 triệu</span>
+                            </div>
+                            <div class="col-md-6 col-sm-6 col-6 card-border-right">
+                                <span>Lãi suất (tạm tính) *</span>
+                                <span class="fw-bold text-red font-title-card">1.98% </span><span
+                                    class="fw-bold font-title-card">/tháng</span>
+                            </div>
+                        </div>
+
+                        <div class="px-3 mb-2 mt-3">
+                            <button class="btn-card_regist-loan-product mb-4" id="btn-lotte_premium">
+                                Đăng ký ngay <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                    fill="currentColor" class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd"
+                                        d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8">
+                                    </path>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card mb-4 position-relative card-kh-chukinhdoanh"
+                        style="border: none; border-radius: 55px;">
+
+                        <div class="card-body pt-0 pb-0" style="margin-top: 20em;">
+                            <h4 class="fw-bold text-red">Cho vay khách hàng
+                                là chủ kinh doanh</h4>
+                        </div>
+
+                        <div class="px-3">
+                            Khách hàng là công nhân, đang làm việc chính thức tại các công ty với thu nhập chỉ từ 4
+                            triệu đồng đã có thể vay với lãi suất hấp dẫn
+                        </div>
+                        <div class="row mx-3 mt-2">
+                            <div class="col-md-6 col-sm-6 col-6 card-border-left">
+                                <span>Số tiền vay (tối đa)</span>
+                                <br>
+                                <span class="fw-bold text-red font-title-card">40 triệu</span>
+                            </div>
+                            <div class="col-md-6 col-sm-6 col-6 card-border-right">
+                                <span>Thời gian vay tối đa</span>
+                                <br>
+                                <span class="fw-bold text-red font-title-card">24 </span><span
+                                    class="fw-bold font-title-card">tháng</span>
+                            </div>
+                        </div>
+
+                        <div class="px-3 mb-2 mt-3">
+                            <button class="btn-card_regist-loan-product mb-4" id="btn-lotte_premium">
+                                Đăng ký ngay <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                    fill="currentColor" class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd"
+                                        d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8">
+                                    </path>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="loan-process-mobile">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 col-xs-12 col-sm-12">
+                    <p class="section-title">Quy trình đăng ký vay</p>
+                    <hr class="section-title_line">
+                </div>
+                <div id="control-loan-process" class="carousel" data-bs-ride="carousel">
+                    <div class="carousel-inner-cus">
+                        <div class="carousel-item active">
+                            <div class="row">
+                                <div class="col-md me-lg-3 me-md-3 mt-xs-2 shadow card-loan-process">
+                                    <div class="card card-loan-process_body">
+                                        <!-- Card Header with Rounded Image -->
+                                        <div class="card-header-img-loan-process">
+                                            <img src="images/dang-ky-vay-20240216094817-3rgak.png"
+                                                alt="Profile">
+                                        </div>
+                                        <!-- Card Body -->
+                                        <div class="card-body text-center">
+                                            <h6 class="card-title fw-bold text-red">1. Đăng ký vay</h6>
+                                            <p class="card-text">Khách hàng liên hệ Hotline: 1900-6866 hoặc để lại thông
+                                                tin trên
+                                                website, app để được tư vấn miễn phí</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="row">
+                                <div class="col-md me-lg-3 me-md-3 mt-xs-2 shadow card-loan-process">
+                                    <div class="card card-loan-process_body">
+                                        <!-- Card Header with Rounded Image -->
+                                        <div class="card-header-img-loan-process">
+                                            <img src="images/g3717-20240216094828-73z9e.png"
+                                                class="card-img-top" alt="Profile">
+                                        </div>
+                                        <!-- Card Body -->
+                                        <div class="card-body text-center">
+                                            <h6 class="card-title fw-bold text-red">2. Nộp hồ sơ vay</h6>
+                                            <p class="card-text">Sau khi được nhân viên của LOTTE Finance tư vấn về sản
+                                                phẩm, Khách hàng
+                                                chọn khoản vay phù hợp và nộp hồ sơ trực tiếp hoặc online</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="row">
+                                <div class="col-md me-lg-3 me-md-3 mt-xs-2 shadow card-loan-process">
+                                    <div class="card card-loan-process_body">
+                                        <!-- Card Header with Rounded Image -->
+                                        <div class="card-header-img-loan-process">
+                                            <img src="images/group-39888-20240216094840-56gqj.png"
+                                                alt="Profile">
+                                        </div>
+                                        <!-- Card Body -->
+                                        <div class="card-body text-center">
+                                            <h6 class="card-title fw-bold text-red">3. Thẩm định & phê duyệt hồ sơ</h6>
+                                            <p class="card-text">Dựa trên hồ sơ Khách hàng cung cấp, LOTTE Finance sẽ
+                                                thẩm định và gửi
+                                                đến Khách hàng kết quả phê duyệt</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="row">
+                                <div class="col-md me-lg-3 me-md-3 mt-xs-2 shadow card-loan-process">
+                                    <div class="card card-loan-process_body">
+                                        <!-- Card Header with Rounded Image -->
+                                        <div class="card-header-img-loan-process">
+                                            <img src="images/giai-ngan-20240216094828-wvtj0.png" alt="Profile">
+                                        </div>
+                                        <!-- Card Body -->
+                                        <div class="card-body text-center">
+                                            <h6 class="card-title fw-bold text-red">4. Nhận giải ngân</h6>
+                                            <p class="card-text">Sau khi ký hợp đồng vay, Khách hàng nhận tiền trực tiếp
+                                                qua tài khoản
+                                                ngân hàng hoặc tại điểm giao dịch từ đối tác của LOTTE Finance như
+                                                VNPost, Vietinbank,….
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#control-loan-process"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#control-loan-process"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"> </span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="loan-process mt-5" id="cards">
+        <div class="container mt-2">
+            <div class="row">
+                <div class="col-md-12 col-xs-12 col-sm-12">
+                    <p class="section-title">Quy trình đăng ký vay</p>
+                    <hr class="section-title_line">
+                </div>
+                <div class="col-md me-lg-3 me-md-3 mt-xs-2 shadow card-loan-process">
+                    <div class="card card-loan-process_body">
+                        <!-- Card Header with Rounded Image -->
+                        <div class="card-header-img-loan-process">
+                            <img src="images/dang-ky-vay-20240216094817-3rgak.png" alt="Profile">
+                        </div>
+                        <!-- Card Body -->
+                        <div class="card-body text-center">
+                            <h6 class="card-title fw-bold text-red">1. Đăng ký vay</h6>
+                            <p class="card-text">Khách hàng liên hệ Hotline: 1900-6866 hoặc để lại thông tin trên
+                                website, app để được tư vấn miễn phí</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md me-lg-3 me-md-3 mt-xs-2 shadow card-loan-process">
+                    <div class="card card-loan-process_body">
+                        <!-- Card Header with Rounded Image -->
+                        <div class="card-header-img-loan-process">
+                            <img src="images/g3717-20240216094828-73z9e.png" class="card-img-top"
+                                 alt="Profile">
+                        </div>
+                        <!-- Card Body -->
+                        <div class="card-body text-center">
+                            <h6 class="card-title fw-bold text-red">2. Nộp hồ sơ vay</h6>
+                            <p class="card-text">Sau khi được nhân viên của LOTTE Finance tư vấn về sản phẩm, Khách hàng
+                                chọn khoản vay phù hợp và nộp hồ sơ trực tiếp hoặc online</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md me-lg-3 me-md-3 mt-xs-2 shadow card-loan-process">
+                    <div class="card card-loan-process_body">
+                        <!-- Card Header with Rounded Image -->
+                        <div class="card-header-img-loan-process">
+                            <img src="images/group-39888-20240216094840-56gqj.png" alt="Profile">
+                        </div>
+                        <!-- Card Body -->
+                        <div class="card-body text-center">
+                            <h6 class="card-title fw-bold text-red">3. Thẩm định & phê duyệt hồ sơ</h6>
+                            <p class="card-text">Dựa trên hồ sơ Khách hàng cung cấp, LOTTE Finance sẽ thẩm định và gửi
+                                đến Khách hàng kết quả phê duyệt</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md me-lg-3 me-md-3 mt-xs-2 shadow card-loan-process">
+                    <div class="card card-loan-process_body">
+                        <!-- Card Header with Rounded Image -->
+                        <div class="card-header-img-loan-process">
+                            <img src="images/giai-ngan-20240216094828-wvtj0.png" alt="Profile">
+                        </div>
+                        <!-- Card Body -->
+                        <div class="card-body text-center">
+                            <h6 class="card-title fw-bold text-red">4. Nhận giải ngân</h6>
+                            <p class="card-text">Sau khi ký hợp đồng vay, Khách hàng nhận tiền trực tiếp qua tài khoản
+                                ngân hàng hoặc tại điểm giao dịch từ đối tác của LOTTE Finance như VNPost, Vietinbank,….
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 m-auto text-center mt-5">
+                    <button class="btn-card_regist mb-4" id="btn-lotte_premium">
+                        Đăng ký ngay <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                            class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8">
+                            </path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="customer-comment-mobile mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 col-xs-12 col-sm-12">
+                    <p class="section-title">Khách hàng nói gì về chúng tôi</p>
+                    <hr class="section-title_line">
+                </div>
+                <div id="control-customer-comment" class="carousel" data-bs-ride="carousel">
+                    <div class="carousel-inner-cus">
+                        <div class="carousel-item active">
+                            <div class="row">
+                                <div class="col-md mr-20 shadow card-customer-comment">
+                                    <div class="card card-customer-comment_body">
+                                        <!-- Card Header with Rounded Image -->
+                                        <div class="card-header-img">
+                                            <img src="images/12-20240216094817-8gs2j%20(1).png"
+                                                class="rounded-circle" alt="Profile">
+                                        </div>
+                                        <!-- Card Body -->
+                                        <div class="card-body text-center" style="position: relative;">
+                                            <p class="card-text">Tôi hoàn toàn hài lòng khi vay tại LOTTE Finance. Các
+                                                thủ tục vay rất đơn giản và tôi đã nhận được tiền giải ngân nhanh chóng
+                                            </p>
+                                            <h5 class="card-title fw-bold text-red">Anh Tiến Hưng</h5>
+                                            <p class="text text-muted">Quản đốc phân xưởng</p>
+                                            <img class="qoute-mobile" src="images/quote.png" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="row">
+                                <div class="col-md mr-20 shadow card-customer-comment">
+                                    <div class="card card-customer-comment_body">
+                                        <!-- Card Header with Rounded Image -->
+                                        <div class="card-header-img">
+                                            <img src="images/xuandat.png" class="rounded-circle" alt="Profile">
+                                        </div>
+                                        <!-- Card Body -->
+                                        <div class="card-body text-center" style="position: relative;">
+                                            <p class="card-text-customer">Chính sách của bên LOTTE Finance rất tốt nên tôi yên
+                                                tâm sử dụng dịch vụ của LOTTE Finance. Các bạn nhân viên tư vấn rất
+                                                nhiệt tình, nhanh chóng</p>
+                                            <h5 class="card-title fw-bold text-red">Anh Xuân Đạt</h5>
+                                            <p class="text text-muted">Nhân viên văn phòng</p>
+                                            <img class="qoute-mobile" src="images/quote.png" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="row">
+                                <div class="col-md mr-20 shadow card-customer-comment">
+                                    <div class="card card-customer-comment_body">
+                                        <!-- Card Header with Rounded Image -->
+                                        <div class="card-header-img">
+                                            <img src="images/chivan.png" class="rounded-circle" alt="Profile">
+                                        </div>
+                                        <!-- Card Body -->
+                                        <div class="card-body text-center" style="position: relative;">
+                                            <p class="card-text-customer">Khi gia đình có khoản chi đột xuất, nhờ có khoản vay
+                                                kịp thời từ LOTTE Finance, tôi và gia đình đã có thể nhanh chóng ổn định
+                                                cuộc sống</p>
+                                            <h5 class="card-title fw-bold text-red">Chị Vân</h5>
+                                            <p class="text text-muted">Nữ y tá</p>
+                                            <img class="qoute-mobile" src="images/quote.png" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="row">
+                                <div class="col-md mr-20 shadow card-customer-comment">
+                                    <div class="card card-customer-comment_body">
+                                        <!-- Card Header with Rounded Image -->
+                                        <div class="card-header-img">
+                                            <img src="images/chivananh.png" class="rounded-circle"
+                                                 alt="Profile">
+                                        </div>
+                                        <!-- Card Body -->
+                                        <div class="card-body text-center" style="position: relative;">
+                                            <p class="card-text-customer">Nhờ LOTTE Finance tôi có thể cân đối các nhu cầu mua
+                                                sắm hàng ngày và chủ động chi trả cho các tình huống khẩn cấp</p>
+                                            <h5 class="card-title fw-bold text-red">Chị Vân Anh</h5>
+                                            <p class="text text-muted">Giáo viên</p>
+                                            <img class="qoute-mobile" src="images/quote.png" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="row">
+                                <div class="col-md mr-20 shadow card-customer-comment">
+                                    <div class="card card-customer-comment_body">
+                                        <!-- Card Header with Rounded Image -->
+                                        <div class="card-header-img">
+                                            <img src="images/chihonganh.png" class="rounded-circle"
+                                                 alt="Profile">
+                                        </div>
+                                        <!-- Card Body -->
+                                        <div class="card-body text-center" style="position: relative;">
+                                            <p class="card-text-customer">Là người có 2 con nhỏ, chi phí ăn học cho các con hàng
+                                                tháng với tôi rất lớn. LOTTE Finance đã giúp tôi có một khoản tiền dự
+                                                phòng để yên tâm chăm lo cho các con</p>
+                                            <h5 class="card-title fw-bold text-red">Chị Hồng Anh</h5>
+                                            <p class="text text-muted">Nội trợ</p>
+                                            <img class="qoute-mobile" src="images/quote.png" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#control-customer-comment"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#control-customer-comment"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"> </span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="customer-comment mt-5" id="customers">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 col-xs-12 col-sm-12">
+                    <p class="section-title">Khách hàng nói gì về chúng tôi</p>
+                    <hr class="section-title_line">
+                </div>
+                <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class="row">
+                                <div class="col-md mr-20 shadow card-loan-process">
+                                    <div class="card card-loan-process_body">
+                                        <!-- Card Header with Rounded Image -->
+                                        <div class="card-header-img">
+                                            <img src="images/12-20240216094817-8gs2j%20(1).png"
+                                                class="rounded-circle" alt="Profile">
+                                        </div>
+                                        <!-- Card Body -->
+                                        <div class="card-body text-center" style="position: relative;">
+                                            <p class="card-text">Tôi hoàn toàn hài lòng khi vay tại LOTTE Finance. Các
+                                                thủ tục vay rất đơn giản và tôi đã nhận được tiền giải ngân nhanh chóng
+                                            </p>
+                                            <h5 class="card-title fw-bold text-red">Anh Tiến Hưng</h5>
+                                            <p class="text text-muted">Quản đốc phân xưởng</p>
+                                            <img class="qoute" src="images/quote.png" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md mr-20 shadow card-loan-process">
+                                    <div class="card card-loan-process_body">
+                                        <!-- Card Header with Rounded Image -->
+                                        <div class="card-header-img">
+                                            <img src="images/xuandat.png" class="rounded-circle" alt="Profile">
+                                        </div>
+                                        <!-- Card Body -->
+                                        <div class="card-body text-center" style="position: relative;">
+                                            <p class="card-text">Chính sách của bên LOTTE Finance rất tốt nên tôi yên
+                                                tâm sử dụng dịch vụ của LOTTE Finance. Các bạn nhân viên tư vấn rất
+                                                nhiệt tình, nhanh chóng</p>
+                                            <h5 class="card-title fw-bold text-red">Anh Xuân Đạt</h5>
+                                            <p class="text text-muted">Nhân viên văn phòng</p>
+                                            <img class="qoute" src="images/quote.png" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md mr-20 shadow card-loan-process">
+                                    <div class="card card-loan-process_body">
+                                        <!-- Card Header with Rounded Image -->
+                                        <div class="card-header-img">
+                                            <img src="images/chivan.png" class="rounded-circle" alt="Profile">
+                                        </div>
+                                        <!-- Card Body -->
+                                        <div class="card-body text-center" style="position: relative;">
+                                            <p class="card-text">Khi gia đình có khoản chi đột xuất, nhờ có khoản vay
+                                                kịp thời từ LOTTE Finance, tôi và gia đình đã có thể nhanh chóng ổn định
+                                                cuộc sống</p>
+                                            <h5 class="card-title fw-bold text-red">Chị Vân</h5>
+                                            <p class="text text-muted">Nữ y tá</p>
+                                            <img class="qoute" src="images/quote.png" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="row">
+                                <div class="col-md-4 mr-20 shadow card-loan-process">
+                                    <div class="card card-loan-process_body">
+                                        <!-- Card Header with Rounded Image -->
+                                        <div class="card-header-img">
+                                            <img src="images/chivananh.png" class="rounded-circle"
+                                                 alt="Profile">
+                                        </div>
+                                        <!-- Card Body -->
+                                        <div class="card-body text-center" style="position: relative;">
+                                            <p class="card-text">Nhờ LOTTE Finance tôi có thể cân đối các nhu cầu mua
+                                                sắm hàng ngày và chủ động chi trả cho các tình huống khẩn cấp</p>
+                                            <h5 class="card-title fw-bold text-red">Chị Vân Anh</h5>
+                                            <p class="text text-muted">Giáo viên</p>
+                                            <img class="qoute" src="images/quote.png" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 mr-20 shadow card-loan-process">
+                                    <div class="card card-loan-process_body">
+                                        <!-- Card Header with Rounded Image -->
+                                        <div class="card-header-img">
+                                            <img src="images/chihonganh.png" class="rounded-circle"
+                                                 alt="Profile">
+                                        </div>
+                                        <!-- Card Body -->
+                                        <div class="card-body text-center" style="position: relative;">
+                                            <p class="card-text">Là người có 2 con nhỏ, chi phí ăn học cho các con hàng
+                                                tháng với tôi rất lớn. LOTTE Finance đã giúp tôi có một khoản tiền dự
+                                                phòng để yên tâm chăm lo cho các con</p>
+                                            <h5 class="card-title fw-bold text-red">Chị Hồng Anh</h5>
+                                            <p class="text text-muted">Nội trợ</p>
+                                            <img class="qoute" src="images/quote.png" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"> </span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="company-info mt-5" id="abouts">
+        <div class="company-info-bg-left"></div>
+        <div class="company-info-bg-right"></div>
+        <div class="container ">
+            <div class="row">
+                <div class="col-md-6 mt-5">
+                    <div class="col-md-12 col-xs-12 col-sm-12">
+                        <p class="section-title">Giới thiệu công ty</p>
+                        <hr class="section-title_line">
+                    </div>
+                    <div class = "centered-box">
+                        <p>Với phương châm “Gia tăng giá trị, nâng tầm cuộc sống”, LOTTE Finance đồng hành cùng khách hàng
+                        trong mọi nhu cầu tài chính hàng ngày như cho vay tiêu dùng tín chấp, cho vay mua ô tô, dịch vụ
+                        mua trước trả sau, phát hành thẻ tín dụng,…</p>
+                        <p>
+                            LOTTE Finance luôn nỗ lực đi đầu thị trường về sự minh bạch trong giao dịch tài chính, nhằm cung
+                            cấp những sản phẩm, dịch vụ uy tín tới khách hàng và góp phần đẩy lùi tín dụng đen tại Việt Nam.
+                        </p>
+                    </div>
+
+                </div>
+                <div class="col-md-6 container-company-intro">
+
+                </div>
+                <div class="company-register-web">
+                    <button class="btn-card_regist mb-4 btn-register-mobile" id="btn-lotte_premium">
+                        Đăng ký ngay <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                                          class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                              d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8">
+                        </path>
+                    </svg>
+                    </button>
+                </div>
+            </div>
+            <div class="row">
+
+            </div>
+        </div>
+    </section>
+    <section class="question-info" id="qa">
+        <div class="question-info-bg"></div>
+        <div class="container ">
+            <div class="row">
+                <div class="col-md-12 col-xs-12 col-sm-12 text-center">
+                    <p class="section-title">Câu hỏi thường gặp</p>
+                    <hr class="section-title_line m-auto mb-4">
+                </div>
+                <div class="col-md-12 question-item">
+                    <div class="row question-item-row">
+                        <div class="col-md-10">
+                            <p>
+                                <a data-bs-toggle="collapse" href="#question1" role="button" aria-expanded="false"
+                                    aria-controls="question1">
+                                    Ngoài lãi phải trả đều đặn, khi vay tại LOTTE Finance tôi còn phải trả những loại
+                                    phí nào?
+                                </a>
+                            </p>
+                        </div>
+                        <div class="col-md-2 icon-collapse">
+                            <a data-bs-toggle="collapse" href="#question1" role="button" aria-expanded="false"
+                                aria-controls="question1">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-chevron-down" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd"
+                                        d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-12 ">
+                        <div class="collapse" id="question1">
+                            LOTTE Finance (LFVN) hỗ trợ làm thủ tục, hồ sơ vay hoàn toàn miễn phí cho khách hàng (KH).
+                            Dù hồ
+                            sơ được duyệt vay hay không, Quý khách không phải đóng bất kỳ chi phí nào trước khi ký hợp
+                            đồng
+                            vay.
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12 question-item">
+                    <div class="row question-item-row">
+                        <div class="col-md-10">
+                            <p>
+                                <a data-bs-toggle="collapse" href="#question2" role="button" aria-expanded="false"
+                                    aria-controls="question2">
+                                    Khoản trả góp của tôi sẽ được tính như thế nào?
+                                </a>
+                            </p>
+                        </div>
+                        <div class="col-md-2 icon-collapse">
+                            <a data-bs-toggle="collapse" href="#question2" role="button" aria-expanded="false"
+                                aria-controls="question2">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-chevron-down" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd"
+                                        d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-12 ">
+                        <div class="collapse" id="question2">
+                            Khoản thanh toán đều hàng tháng, trong đó lãi suất được tính trên cơ sở dư nợ giảm dần và số
+                            tiền gốc phải trả được điều chỉnh để đảm bảo khoản thanh toán đều vào mỗi tháng (ngoại trừ
+                            kỳ
+                            đầu và kỳ cuối, số tiền phải trả hàng tháng có thể khác).
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12 question-item">
+                    <div class="row question-item-row">
+                        <div class="col-md-10">
+                            <p>
+                                <a data-bs-toggle="collapse" href="#question3" role="button" aria-expanded="false"
+                                    aria-controls="question3">
+                                    Lịch sử tín dụng của tôi sẽ bị ảnh hưởng như thế nào khi Khoản Vay bị quá hạn thanh
+                                    toán?
+                                </a>
+                            </p>
+                        </div>
+                        <div class="col-md-2 icon-collapse">
+                            <a data-bs-toggle="collapse" href="#question3" role="button" aria-expanded="false"
+                                aria-controls="question3">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-chevron-down" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd"
+                                        d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-12 ">
+                        <div class="collapse" id="question3">
+                            Tùy theo số ngày quá hạn thanh toán khoản vay mà LFVN sẽ phân loại các nhóm nợ tín dụng khác
+                            nhau theo quy định nợ của Ngân hàng Nhà nước và báo cáo về trung tâm CIC. Đồng thời LFVN sẽ
+                            áp
+                            dụng lãi chậm trả theo quy định của hợp đồng tín dụng.
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12 question-item">
+                    <div class="row question-item-row">
+                        <div class="col-md-10">
+                            <p>
+                                <a data-bs-toggle="collapse" href="#question4" role="button" aria-expanded="false"
+                                    aria-controls="question4">
+                                    Số tiền tối đa tôi có thể vay là bao nhiêu?
+                                </a>
+                            </p>
+                        </div>
+                        <div class="col-md-2 icon-collapse">
+                            <a data-bs-toggle="collapse" href="#question4" role="button" aria-expanded="false"
+                                aria-controls="question4">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-chevron-down" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd"
+                                        d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-12 ">
+                        <div class="collapse" id="question4">
+                            KH được xem xét theo từng sản phẩm KH đăng kí. LFVN đang hỗ trợ vay lên đến 300 triệu. Để
+                            biết
+                            thêm chi tiết KH vui lòng liên hệ tổng đài 19006866 để được tư vấn cụ thể.
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12 question-item">
+                    <div class="row question-item-row">
+                        <div class="col-md-10">
+                            <p>
+                                <a data-bs-toggle="collapse" href="#question5" role="button" aria-expanded="false"
+                                    aria-controls="question5">
+                                    Thời hạn vay tối đa có thể áp dụng cho tôi là bao lâu?
+                                </a>
+                            </p>
+                        </div>
+                        <div class="col-md-2 icon-collapse">
+                            <a data-bs-toggle="collapse" href="#question5" role="button" aria-expanded="false"
+                                aria-controls="question5">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-chevron-down" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd"
+                                        d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-12 ">
+                        <div class="collapse" id="question5">
+                            Thời hạn vay linh hoạt theo từng sản phẩm và nhu cầu của KH, tối thiểu 06 tháng - tối đa 48
+                            tháng. Tuy nhiên, thời hạn vay còn phụ thuộc vào độ tuổi lao động của KH, trong đó độ tuổi
+                            tối
+                            đa kết thúc hợp đồng vay là 60-65 tuổi.
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12 question-item">
+                    <div class="row question-item-row">
+                        <div class="col-md-10">
+                            <p>
+                                <a data-bs-toggle="collapse" href="#question6" role="button" aria-expanded="false"
+                                    aria-controls="question6">
+                                    Thời gian thẩm định hồ sơ mất bao lâu?
+                                </a>
+                            </p>
+                        </div>
+                        <div class="col-md-2 icon-collapse">
+                            <a data-bs-toggle="collapse" href="#question6" role="button" aria-expanded="false"
+                                aria-controls="question6">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-chevron-down" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd"
+                                        d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-12 ">
+                        <div class="collapse" id="question6">
+                            Tùy vào gói vay KH lựa chọn mà có thời gian thẩm định và duyệt hồ sơ vay khác nhau. Kể từ
+                            thời
+                            điểm KH cung cấp đủ hồ sơ, khoản vay sẽ được giải ngân chỉ sau 4 giờ.
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12 question-item">
+                    <div class="row question-item-row">
+                        <div class="col-md-10">
+                            <p>
+                                <a data-bs-toggle="collapse" href="#question7" role="button" aria-expanded="false"
+                                    aria-controls="question7">
+                                    Trường hợp tôi muốn thanh toán trước hạn thì phải làm thế nào?
+                                </a>
+                            </p>
+                        </div>
+                        <div class="col-md-2 icon-collapse">
+                            <a data-bs-toggle="collapse" href="#question7" role="button" aria-expanded="false"
+                                aria-controls="question7">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-chevron-down" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd"
+                                        d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-12 ">
+                        <div class="collapse" id="question7">
+                            KH lưu ý chỉ được tất toán trước hạn toàn bộ khoản vay không được tất toán trước hạn một
+                            phần
+                            KH vui lòng liên hệ số hotline 19006866 bằng số điện thoại Bên vay đã đăng ký để có thông
+                            tin về
+                            số tiền cũng như cách thức thanh toán. Khoản vay cũng có thể được hệ thống tự động tất toán
+                            trước hạn khi KH nộp đủ số tiền cần thiết cho LOTTE Finance.
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12 question-item">
+                    <div class="row question-item-row">
+                        <div class="col-md-10">
+                            <p>
+                                <a data-bs-toggle="collapse" href="#question9" role="button" aria-expanded="false"
+                                    aria-controls="question9">
+                                    Bảo hiểm khoản vay là gì? Có bắt buộc mua bảo hiểm khi ký hợp đồng vay hay không?
+                                </a>
+                            </p>
+                        </div>
+                        <div class="col-md-2 icon-collapse">
+
+                            <a data-bs-toggle="collapse" href="#question9" role="button" aria-expanded="false"
+                                aria-controls="question9">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-chevron-down" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd"
+                                        d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708" />
+                                </svg>
+                            </a>
+
+                        </div>
+                    </div>
+                    <div class="col-md-12 ">
+                        <div class="collapse" id="question9">
+                            Bảo hiểm khoản vay là số tiền mà khách hàng chi trả để mua bảo hiểm cho hợp đồng vay của
+                            mình.
+                            Khi khách hàng mua bảo hiểm, trong trường hợp khách hàng không may gặp phải những rủi ro
+                            không
+                            lường trước được sau khi vay tín chấp, khiến khách hàng mất khả năng thanh toán, thì công ty
+                            bảo
+                            hiểm sẽ trả nợ thay khách hàng. Bảo hiểm khoản vay không chỉ bảo vệ khách hàng và gia đình
+                            trước
+                            các rủi ro, mà còn là một tiêu chí giúp khoản vay của khách hàng dễ dàng được duyệt hơn. Bảo
+                            hiểm khoản vay là chi phí không bắt buộc khi ký hợp đồng vay, khách hàng có quyền lựa chọn
+                            việc
+                            mua hoặc không mua bảo hiểm.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="footer position-relative">
+        <div class="bg-card_right"></div>
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-11 col-12 p-md-0">
+                    <div class="footer-content">
+                        <div class="footer-content_logo">
+                            <img src="images/llogo-footer.png" alt="Logo footer">
+                        </div>
+                        <div class="row footer-content-info">
+                            <div class="col-md-6 px-1 mt-5 align-items-center">
+                                <div class="d-flex flex-column">
+                                    <div class="row mx-0">
+                                        <div class="fw-bold col-lg-4 col-6 pb-md-3 pb-2 px-0 font-footer">Đăng ký khoản vay: </div>
+                                        <div class="col-6 px-0 font-footer-info">
+                                            <span>1900 633 070</span>
+                                            <br>
+                                            <span style="font-style: italic;">Thời gian hỗ trợ và tư vấn Khách
+                                                hàng:</span><br>
+                                            <span style="font-style: italic;"> Thứ 2 đến thứ 6: 8:00 – 18:00 | Thứ 7: 8:00 – 16:00</span>
+                                        </div>
+                                    </div>
+                                    <div class="row mx-0 mt-2">
+                                        <div class="fw-bold col-lg-4 col-6 pb-md-3 pb-2 px-0 font-footer">Chăm sóc khách hàng:</div>
+                                        <div class="col-4 px-0 font-footer-info">
+                                            <span>1900 6866</span>
+                                        </div>
+                                    </div>
+                                    <div class="row mx-0">
+                                        <div class="fw-bold col-lg-4 col-6 pb-md-3 pb-2 px-0 font-footer">Website:</div>
+                                        <div class="col-4  px-0 font-footer-info">
+                                            <span>www.lottefinance.vn</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 px-1 my-md-1 my-3 d-flex align-items-center justify-content-md-center">
+                                <div class="d-flex flex-column ">
+                                    <div class="fw-bolder mb-2 font-footer-qrs" style="position: relative; top: -12px;">
+                                        <span>Khám phá LOTTE Finance Mobile:</span>
+                                    </div>
+                                    <div class="d-flex flex-row font-footer-qr" style="position: relative; top: -12px;">
+                                        <div>
+                                            <img src="images/qrcode.png" alt="QRCode"
+                                                 style="height: 130px; width: 130px;">
+                                        </div>
+                                        <div>
+                                            <div class="d-flex flex-column">
+                                                <a href="https://play.google.com/store/apps/details?id=com.lotte.finance.vietnam&amp;fbclid=IwAR3Yg_BuIAXg_PcjNdk8L2Xqi5hjNmOr_GLA-XKRI5GgiZ3LB3ehLvXevxQ"
+                                                    target="_blank"
+                                                    data-replace-href="https://play.google.com/store/apps/details?id=com.lotte.finance.vietnam&amp;fbclid=IwAR3Yg_BuIAXg_PcjNdk8L2Xqi5hjNmOr_GLA-XKRI5GgiZ3LB3ehLvXevxQ">
+                                                    <img src="images/appstore.png" alt="AppStore LFVN"
+                                                         style="height: 65px; width: 188px;">
+                                                </a>
+                                            </div>
+                                            <div class="d-flex flex-column">
+                                                <a href="https://play.google.com/store/apps/details?id=com.lotte.finance.vietnam&amp;fbclid=IwAR3Yg_BuIAXg_PcjNdk8L2Xqi5hjNmOr_GLA-XKRI5GgiZ3LB3ehLvXevxQ"
+                                                    target="_blank"
+                                                    data-replace-href="https://play.google.com/store/apps/details?id=com.lotte.finance.vietnam&amp;fbclid=IwAR3Yg_BuIAXg_PcjNdk8L2Xqi5hjNmOr_GLA-XKRI5GgiZ3LB3ehLvXevxQ">
+                                                    <img src="images/chplay.png" alt="Chplay app"
+                                                         style="height: 65px; width: 188px;">
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="footer-end">
+                            <div>
+                                <span>© 2024 Bản quyền thuộc về LOTTE FINANCE</span>
+                            </div>
+                            <div class="footer-end-desc">
+                                <span>Mã số doanh nghiệp: 0103172804 do Sở Kế hoạch và Đầu tư Thành phố Hà Nội cấp ngày
+                                    31/12/2008</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="row justify-content-center">
+                        <div class="col-12 col-md-8 col-lg-8 col-md-offset-2 col-lg-offset-4 text-center mt-4">
+                            <h1 class="header-title ">Quý khách vui lòng xác nhận số điện thoại để tiếp tục đăng ký</h1>
+                        </div>
+                        <div class="col-12 col-md-12 col-lg-12 text-center mt-2">
+                            <p>Quý khách vui lòng vui lòng mở tin nhắn Zalo từ tài khoản LOTTE Finance để nhận mã OTP và
+                                nhập dưới
+                                đây.</p>
+                        </div>
+                        <div class="col-12 col-md-12 col-lg-12 text-center mt-2">
+                            <p>Nếu Quý khách không có tài khoản Zalo, vui lòng kiểm tra tin nhắn điện thoại(SMS)</p>
+                        </div>
+                        <div class="col-12 col-md-12 col-lg-12">
+                            <input type="hidden" id="prev-form" />
+                            <div class="card bg-white mb-3 mt-3 border-0"
+                                style="box-shadow: 0 12px 15px rgba(0, 0, 0, 0.02);">
+                                <p class="otp-countdown text-center" id="countdown"></p>
+                                <div class="card-body p-5 text-center">
+                                    <div class="otp-field mb-4">
+                                        <input type="number" min="0" max="9" class="otp-input" maxlength="1"
+                                            id="otp-01" />
+                                        <input type="number" min="0" max="9" class="otp-input" maxlength="1"
+                                            id="otp-02" />
+                                        <input type="number" min="0" max="9" class="otp-input" maxlength="1"
+                                            id="otp-03" />
+                                        <input type="number" min="0" max="9" class="otp-input" maxlength="1"
+                                            id="otp-04" />
+                                        <input type="number" min="0" max="9" class="otp-input" maxlength="1"
+                                            id="otp-05" />
+                                        <input type="number" min="0" max="9" class="otp-input" maxlength="1"
+                                            id="otp-06" />
+                                    </div>
+                                    <button class="btn button-gardient mb-3" id="btn-change-phone">
+                                        Thay đổi số điện thoại
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="modalForm" tabindex="-1" aria-labelledby="modalForm" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="row justify-content-center">
+                        <div class="col-12 col-md-8 col-lg-8 col-md-offset-2 col-lg-offset-4 text-center mt-4">
+                            <button type="button" class="custom-close-btn" data-bs-dismiss="modal" aria-label="Close"></button>
+                            <h1 class="header-title popup-register">Đăng ký khoản vay</h1>
+                        </div>
+                        <div class="col-12 col-md-12 col-lg-12">
+                            <div class="card bg-white mb-3 mt-3 border-0"
+                                style="box-shadow: 0 12px 15px rgba(0, 0, 0, 0.02);">
+                                <p class="otp-countdown text-center" id="countdown"></p>
+                                <div class="card-body">
+                                    <form id="form-submit-popup">
+                                        <div class="mb-2">
+                                            <label for="exampleFormControlInput1" class="form-label">Họ & Tên</label>
+                                            <span style="color: rgb(231, 37, 43);">*</span>
+                                            <input type="text" name="name" placeholder="Nhập họ và tên"
+                                                class="form-control" id="exampleFormControlInput1">
+                                        </div>
+                                        <div class="mb-2">
+                                            <label for="exampleFormControlInput1" class="form-label">Số điện
+                                                thoại</label> <span style="color: rgb(231, 37, 43);">*</span>
+                                            <input type="text" name="phone" placeholder="Nhập số điện thoại"
+                                                class="form-control" id="exampleFormControlInput1">
+                                        </div>
+                                        <div class="mb-2">
+                                            <label for="exampleFormControlInput1" class="form-label">CMND/CCCD</label>
+                                            <span style="color: rgb(231, 37, 43);">*</span>
+                                            <input type="text" name="idCard" placeholder="Nhập CMND/CCCD"
+                                                class="form-control" id="exampleFormControlInput1">
+                                        </div>
+                                        <div class="mb-2 " style="font-size: 12px;">
+                                            <p>Bằng việc tiếp tục, Tôi đồng ý để LOTTE Finance xử lý dữ liệu <svg
+                                                    id="policy-info" style="color: lightskyblue;"
+                                                    xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                    fill="currentColor" class="bi bi-info-circle" viewBox="0 0 16 16">
+                                                    <path
+                                                        d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16" />
+                                                    <path
+                                                        d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0" />
+                                                </svg></p>
+                                        </div>
+                                        <div class=" form-check">
+                                            <input type="checkbox" name="i_agree_terms_and_conditions"
+                                                class="form-check-input" id="exampleCheck1">
+                                            <label class="form-check-label" for="exampleCheck1">
+                                                <span data-checked="false">Tôi đồng ý với</span>
+                                                <a
+                                                    href="https://www.lottefinance.vn/web/service/customer/termAndCond/userDataPolicies?csrt=11640075599545901093"
+                                                    target="_blank"
+                                                    style="color: red;"> Điều khoản Xử lý dữ liệu cá nhân</a>
+                                                <a> và </a>
+                                                <a
+                                                        href="https://www.lottefinance.vn/web/service/customer/termAndCond/loanTnC?csrt=11640075599545901093"
+                                                        target="_blank"
+                                                        style="color: red;"> Điều khoản Giao dịch</a>
+                                            </label>
+                                        </div>
+                                    </form>
+                                    <div class="text-center">
+                                        <button class="btn button-gardient mb-4 form-control" id="btn-submit-popup">
+                                            Đăng ký ngay
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="modalNoti" tabindex="-1" aria-labelledby="modalNoti" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="row justify-content-center">
+                        <div class="col-12 col-md-8 col-lg-8 col-md-offset-2 col-lg-offset-4 text-center mt-4">
+                            <h1 class="header-title" id="noti-title" style="font-size: 26px !important;
+                      font-weight: bold !important;
+                      line-height: 1.6;
+                      color: rgb(231, 37, 43);
+                      text-transform: uppercase;
+                      text-align: center;"></h1>
+                        </div>
+                        <div class="col-12 col-md-12 col-lg-12">
+                            <div class="card bg-white mb-3 mt-3 border-0"
+                                style="box-shadow: 0 12px 15px rgba(0, 0, 0, 0.02);">
+                                <div class="card-body">
+                                    <div class="text-center">
+                                        <h1 id="noti-message">Thông báo</h1>
+                                        <div id="noti-icon-success" class="d-flex my-2 justify-content-center d-none">
+                                            <svg style="color: green;" xmlns="http://www.w3.org/2000/svg" width="60"
+                                                height="60" fill="currentColor" class="bi bi-check-circle"
+                                                viewBox="0 0 16 16">
+                                                <path
+                                                    d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16" />
+                                                <path
+                                                    d="m10.97 4.97-.02.022-3.473 4.425-2.093-2.094a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05" />
+                                            </svg>
+                                        </div>
+                                        <div id="noti-icon-error" class="d-flex my-2 justify-content-center d-none">
+                                            <svg style="color: red;" xmlns="http://www.w3.org/2000/svg" width="60"
+                                                height="60" fill="currentColor" class="bi bi-ban" viewBox="0 0 16 16">
+                                                <path
+                                                    d="M15 8a6.97 6.97 0 0 0-1.71-4.584l-9.874 9.875A7 7 0 0 0 15 8M2.71 12.584l9.874-9.875a7 7 0 0 0-9.874 9.874ZM16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0" />
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <div class="text-center">
+                                        <button class="btn button-gardient mt-5 form-control" id="btn-close-noti">
+                                            Đóng
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="modalNotiDefault" tabindex="-1" aria-labelledby="modalNoti" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="row justify-content-center">
+                        <div class="col-12 col-md-8 col-lg-8 col-md-offset-2 col-lg-offset-4 text-center mt-4">
+                            <h1 id="noti-title-default" style="font-size: 26px !important;
+                      font-weight: bold !important;
+                      line-height: 1.6;
+                      color: rgb(231, 37, 43);
+                      text-transform: uppercase;
+                      text-align: center;"></h1>
+                        </div>
+                        <div class="col-12 col-md-12 col-lg-12">
+                            <div class="card bg-white mb-3 mt-3 border-0"
+                                style="box-shadow: 0 12px 15px rgba(0, 0, 0, 0.02);">
+                                <div class="card-body">
+                                    <div class="text-center">
+                                        <h1 id="noti-message-default" class = "noti-message">Thông báo</h1>
+                                        <div id="noti-icon-success-default"
+                                            class="d-flex my-2 justify-content-center d-none">
+                                            <svg style="color: green;" xmlns="http://www.w3.org/2000/svg" width="60"
+                                                height="60" fill="currentColor" class="bi bi-check-circle"
+                                                viewBox="0 0 16 16">
+                                                <path
+                                                    d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16" />
+                                                <path
+                                                    d="m10.97 4.97-.02.022-3.473 4.425-2.093-2.094a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05" />
+                                            </svg>
+                                        </div>
+                                        <div id="noti-icon-error-default"
+                                            class="d-flex my-2 justify-content-center d-none">
+                                            <svg style="color: red;" xmlns="http://www.w3.org/2000/svg" width="60"
+                                                height="60" fill="currentColor" class="bi bi-ban" viewBox="0 0 16 16">
+                                                <path
+                                                    d="M15 8a6.97 6.97 0 0 0-1.71-4.584l-9.874 9.875A7 7 0 0 0 15 8M2.71 12.584l9.874-9.875a7 7 0 0 0-9.874 9.874ZM16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0" />
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <div class="text-center">
+                                        <button class="btn button-gardient mt-5 form-control"
+                                            id="btn-close-noti-default">
+                                            Đóng
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="modalPolicy" tabindex="-1" aria-labelledby="modalPolicy" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header" style="border-bottom: none;">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"><svg
+                            xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-x-lg" viewBox="0 0 16 16">
+                            <path
+                                d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z" />
+                        </svg></button>
+                </div>
+                <div class="modal-body m-0 p-0">
+                    <div class="row justify-content-center">
+                        <div class="col-12 col-md-12 col-lg-12">
+                            <div class="card bg-white border-0" style="box-shadow: 0 12px 15px rgba(0, 0, 0, 0.02);">
+                                <div class="card-body">
+                                    <div class="text-center">
+                                        <h1 style="    font-size: 13px;
+                            font-style: italic;
+                            line-height: 1.2;
+                            color: rgb(0, 0, 0);
+                            text-align: justify;">Bằng việc tiếp tục, tôi xác nhận và đồng ý cho phép LOTTE Finance xử
+                                            lý
+                                            các thông tin trên nhằm mục đích giới thiệu sản phẩm, dịch vụ của LOTTE
+                                            Finance từ nay trở về sau
+                                            tới tôi và các nội dung khác được nêu tại Điều khoản điều kiện xử lý dữ liệu
+                                            cá nhân</h1>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div data-action="true" id="GROUP89" class="ladi-element">
+        <div class="ladi-group"><a href="tel:1900633070" id="GROUP87" class="ladi-element">
+                <div class="ladi-group">
+                    <div id="IMAGE73" class="ladi-element">
+                        <div class="ladi-image">
+                            <div class="ladi-image-background"></div>
+                        </div>
+                    </div>
+                    <div id="IMAGE75" class="ladi-element ladi-animation">
+                        <div class="ladi-image">
+                            <div class="ladi-image-background"></div>
+                        </div>
+                    </div>
+                </div>
+            </a><a href="https://m.me/LOTTEFinanceVietnam?locale=vi_VN" target="_blank" id="GROUP88"
+                class="ladi-element" data-replace-href="https://m.me/LOTTEFinanceVietnam?locale=vi_VN">
+                <div class="ladi-group">
+                    <div id="IMAGE72" class="ladi-element">
+                        <div class="ladi-image">
+                            <div class="ladi-image-background"></div>
+                        </div>
+                    </div>
+                    <div id="IMAGE74" class="ladi-element ladi-animation">
+                        <div class="ladi-image">
+                            <div class="ladi-image-background"></div>
+                        </div>
+                    </div>
+                </div>
+            </a></div>
+    </div>
+    <div id="loading"></div>
+    <script type="text/javascript" src="js/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="js/dist/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="./env.js"></script>
+    <script type="text/javascript" src="js/lib.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript" src="./js/toast.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js?render=GOOGLE_SITE_KEY_TEMP"></script>
+    <script>
+        $(document).ready(function () {
+            function checkScreenSize() {
+                return $(window).width() <= 767;
+            }
+
+            $('#myModal').on('show.bs.modal', function () {
+                if (checkScreenSize()) {
+                    $('#GROUP89').hide();
+                }
+            });
+
+            $('#myModal').on('hidden.bs.modal', function () {
+                if (checkScreenSize()) {
+                    $('#GROUP89').show();
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
