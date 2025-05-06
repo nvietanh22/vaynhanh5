@@ -1762,7 +1762,7 @@ body .footer-end {
 
 
 .toggle-text {
-    cursor: pointer;
+    /*cursor: pointer;*/
     color: darkgrey;
     /* Bootstrap primary color */
     text-align: center;
