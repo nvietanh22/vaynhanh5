@@ -3070,6 +3070,21 @@
                 }, 100);
             }
 
+            function adjustBodyPadding() {
+                if (window.innerWidth <= 767) {
+                    const ctaWrapper = document.getElementById('fixed-mobile-cta-wrapper');
+                    const body = document.body;
+
+                    if (ctaWrapper && body) {
+                        const ctaHeight = ctaWrapper.offsetHeight;
+                        body.style.paddingBottom = ctaHeight + 'px';
+                    }
+                } else {
+                    document.body.style.paddingBottom = '0px';
+                }
+            }
+            adjustBodyPadding();
+            window.addEventListener('resize', adjustBodyPadding);
         });
     </script>
 </body>
