@@ -1521,30 +1521,30 @@
 
             </div>
         </div>
-        <div id="customer-counter-wrapper" class="d-none d-md-block">
-            <div id="customer-counter-inner">
-                <img src="./images/icon-face.gif" alt="Happy customer icon" class="counter-icon">
-                <div class="counter-text-group">
-                    <div id="scrolling-counter" class="scrolling-counter"></div>
-                    <p class="counter-text">Khách hàng đã đăng ký vay tại LOTTE Finance</p>
-                </div>
-            </div>
-        </div>
+<!--        <div id="customer-counter-wrapper" class="d-none d-md-block">-->
+<!--            <div id="customer-counter-inner">-->
+<!--                <img src="./images/icon-face.gif" alt="Happy customer icon" class="counter-icon">-->
+<!--                <div class="counter-text-group">-->
+<!--                    <div id="scrolling-counter" class="scrolling-counter"></div>-->
+<!--                    <p class="counter-text">Khách hàng đã đăng ký vay tại LOTTE Finance</p>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
     </section>
     <section class="partner-logos-mobile d-block d-md-none">
         <img src="images/image-1-20240219042009-gfev2.png"
              alt="Các đối tác chiến lược của LOTTE Finance"
              class="partner-logos-image">
 
-        <div id="customer-counter-wrapper-mobile" class="d-block d-md-none">
-            <div id="customer-counter-inner-mobile">
-                <img src="./images/icon-face.gif" alt="Happy customer icon" class="counter-icon">
-                <div class="counter-text-group">
-                    <div id="scrolling-counter-mobile" class="scrolling-counter"></div>
-                    <p class="counter-text">Khách hàng đã đăng ký vay tại LOTTE Finance</p>
-                </div>
-            </div>
-        </div>
+<!--        <div id="customer-counter-wrapper-mobile" class="d-block d-md-none">-->
+<!--            <div id="customer-counter-inner-mobile">-->
+<!--                <img src="./images/icon-face.gif" alt="Happy customer icon" class="counter-icon">-->
+<!--                <div class="counter-text-group">-->
+<!--                    <div id="scrolling-counter-mobile" class="scrolling-counter"></div>-->
+<!--                    <p class="counter-text">Khách hàng đã đăng ký vay tại LOTTE Finance</p>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
     </section>
     <section class="question-info" id="qa">
         <div class="question-info-bg"></div>
@@ -1975,7 +1975,7 @@
                                         <div class="mb-2">
                                             <label for="customerGroupMobile" class="form-label">Bạn thuộc nhóm khách hàng nào</label> <span style="color: rgb(231, 37, 43);">*</span>
                                             <select class="form-select" id="customerGroupMobile" name="salaryType" required>
-                                                <option selected disabled value="">Chọn nhóm khách hàng</option>
+                                                <option selected hidden value="">Chọn nhóm khách hàng</option>
                                                 <option value="Cán bộ công chức viên chức Nhà nước">Cán bộ công chức viên chức Nhà nước</option>
                                                 <option value="Nhân viên văn phòng (nhận lương chuyển khoản)">Nhân viên văn phòng (nhận lương chuyển khoản)</option>
                                                 <option value="Công nhân (nhận lương chuyển khoản)">Công nhân (nhận lương chuyển khoản)</option>
@@ -2200,6 +2200,15 @@
     <div id="fixed-mobile-cta-wrapper" class="d-block d-md-none">
         <button id="fixed-mobile-cta">Đăng ký ngay</button>
     </div>
+    <div id="customer-counter-wrapper">
+        <div id="customer-counter-inner">
+            <img src="./images/icon-cash-inhand.png" alt="Happy customer icon" class="counter-icon">
+            <div class="counter-text-group">
+                <div id="scrolling-counter" class="scrolling-counter"></div>
+                <p class="counter-text">Khách hàng đã đăng ký vay tại LOTTE Finance</p>
+            </div>
+        </div>
+    </div>
     <div id="loading"></div>
     <script type="text/javascript" src="js/dist/jquery.min.js"></script>
     <script type="text/javascript" src="js/dist/bootstrap.bundle.min.js"></script>
@@ -2282,7 +2291,7 @@
                 transform: translate(-50%, -50%);
                 min-width: 100%;
                 min-height: 100%;
-                width: auto;
+                width: 100%;
                 height: auto;
             }
             .slide-static {
@@ -2581,24 +2590,28 @@
         #fixed-register-button {
             position: fixed;
             left: 40px;
-            bottom: 40px;
+            bottom: 100px;
             z-index: 9000;
             cursor: pointer;
-            /*transition: transform 0.2s ease;*/
-            width: 194.75px;
-            height: 54px;
+            width: 220px;
+            height: 77.75px;
+        }
+
+        #fixed-register-button img {
+            width: 100%;
+            height: 100%;
+            object-fit: fill;
         }
 
         #customer-counter-wrapper {
-            position: absolute;
-            z-index: 10;
+            position: fixed;
+            z-index: 8999;
             padding: 3px;
             border-radius: 100px;
             background: linear-gradient(to right, #CC002E, #EC1848, #9A268F);
             box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
-            top: 330px;
-            right: 32%;
-
+            left: 40px;
+            bottom: 15px;
         }
 
         #customer-counter-inner {
@@ -2608,13 +2621,13 @@
             background-color: #fff;
             padding: 12px 17px;
             border-radius: inherit;
-            width: 224.06px;
-            height: 81.26px;
+            width: 214px;
+            height: 71.76px;
         }
 
         .counter-icon {
-            width: 60.52px;
-            height: 60.52px;
+            width: 50.71px;
+            height: 50.71px;
             flex-shrink: 0;
         }
 
@@ -2806,20 +2819,20 @@
             display: block;
         }
 
-        #customer-counter-wrapper-mobile {
-            position: absolute;
-            bottom: 20px;
-            left: 30%;
-            transform: translateX(-50%);
-            /*width: 194.79px;
-            /*height: 70px;*/
-            max-width: 250px;
-            z-index: 10;
-            padding: 3px;
-            border-radius: 139.44px;
-            background: linear-gradient(to right, #CC002E, #EC1848, #9A268F);
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
-        }
+        /*#customer-counter-wrapper-mobile {*/
+        /*    position: absolute;*/
+        /*    bottom: 20px;*/
+        /*    left: 30%;*/
+        /*    transform: translateX(-50%);*/
+        /*    !*width: 194.79px;*/
+        /*    !*height: 70px;*!*/
+        /*    max-width: 250px;*/
+        /*    z-index: 10;*/
+        /*    padding: 3px;*/
+        /*    border-radius: 139.44px;*/
+        /*    background: linear-gradient(to right, #CC002E, #EC1848, #9A268F);*/
+        /*    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);*/
+        /*}*/
 
         #customer-counter-inner-mobile {
             display: flex;
@@ -2959,7 +2972,7 @@
                         if (autoSlideInterval) clearInterval(autoSlideInterval);
                         autoSlideInterval = null;
                         if (window.innerWidth <= 767) {
-                            autoSlideInterval = setInterval(moveToNext, 14000);
+                            autoSlideInterval = setInterval(moveToNext, 5000);
                         }
                     }
                     checkAndRunAutoSlide();
