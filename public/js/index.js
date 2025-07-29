@@ -413,7 +413,7 @@ function sendWarehouseProcessRequest(prevForm, otpStatus = "Thất bại") {
                     idCard: formData.idCard,
                     phoneNumber: formData.phone,
                     custAddress: "",
-                    salaryType: "",
+                    salaryType: formData.salaryType,
                     timeCall: "",
                     otpStatus: otpStatus,
                     cicStatus: "",

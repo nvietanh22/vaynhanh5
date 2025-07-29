@@ -680,7 +680,8 @@ body .footer-end {
         border-style: solid;
         border-color: rgb(219, 3, 110);
         position: relative;
-        height: 510px;
+        height: 590px;
+        margin-top: 60px !important;
     }
 
     .banner {
@@ -1118,7 +1119,7 @@ body .footer-end {
         border-color: rgb(219, 3, 110);
         position: relative;
         left: 3rem;
-        height: 510px;
+        height: 570px;
     }
 
     .loan-simulate-body {
