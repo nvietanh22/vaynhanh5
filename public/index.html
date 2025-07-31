@@ -82,8 +82,20 @@
                             <div class="mb-2">
                                 <label for="exampleFormControlInput1" class="form-label">CMND/CCCD</label> <span
                                     style="color: rgb(231, 37, 43);">*</span>
-                                <input type="text" name="idCard" placeholder="Nhập CCCD (12 số)" class="form-control"
+                                <input type="number" name="idCard" placeholder="Nhập CCCD (12 số)" class="form-control"
                                     id="exampleFormControlInput1">
+                            </div>
+
+                            <div class="mb-2">
+                                <label for="exampleFormControlInput1" class="form-label">Bạn thuộc nhóm khách hàng nào</label> <span style="color: rgb(231, 37, 43);">*</span>
+                                <select class="form-select" id="exampleFormControlInput1" name="salaryType" required>
+                                    <option selected hidden value="">Chọn nhóm khách hàng</option>
+                                    <option value="Cán bộ công chức viên chức Nhà nước">Cán bộ công chức viên chức Nhà nước</option>
+                                    <option value="Nhân viên văn phòng (nhận lương chuyển khoản)">Nhân viên văn phòng (nhận lương chuyển khoản)</option>
+                                    <option value="Công nhân (nhận lương chuyển khoản)">Công nhân (nhận lương chuyển khoản)</option>
+                                    <option value="Sở hữu Hợp đồng Bảo hiểm Nhân thọ hoặc Đăng ký Xe máy">Sở hữu Hợp đồng Bảo hiểm Nhân thọ hoặc Đăng ký Xe máy</option>
+                                    <option value="Khác (lương tiền mặt, kinh doanh tự do,...)">Khác (lương tiền mặt, kinh doanh tự do,...)</option>
+                                </select>
                             </div>
                             <div class="mb-2 " style="font-size: 12px;">
                                 <p>Bằng việc tiếp tục, Tôi đồng ý để LOTTE Finance xử lý dữ liệu <svg id="policy-info"
@@ -145,9 +157,22 @@
                     <div class="mb-2">
                         <label for="exampleFormControlInput1" class="form-label">CMND/CCCD</label> <span
                             style="color: rgb(231, 37, 43);">*</span>
-                        <input type="text" name="idCard" placeholder="Nhập CCCD (12 số)" class="form-control"
+                        <input type="number" name="idCard" placeholder="Nhập CCCD (12 số)" class="form-control"
                                id="exampleFormControlInput1">
                     </div>
+
+                    <div class="mb-2">
+                        <label for="exampleFormControlInput1" class="form-label">Bạn thuộc nhóm khách hàng nào</label> <span style="color: rgb(231, 37, 43);">*</span>
+                        <select class="form-select" id="exampleFormControlInput1" name="salaryType" required>
+                            <option selected hidden value="">Chọn nhóm khách hàng</option>
+                            <option value="Cán bộ công chức viên chức Nhà nước">Cán bộ công chức viên chức Nhà nước</option>
+                            <option value="Nhân viên văn phòng (nhận lương chuyển khoản)">Nhân viên văn phòng (nhận lương chuyển khoản)</option>
+                            <option value="Công nhân (nhận lương chuyển khoản)">Công nhân (nhận lương chuyển khoản)</option>
+                            <option value="Sở hữu Hợp đồng Bảo hiểm Nhân thọ hoặc Đăng ký Xe máy">Sở hữu Hợp đồng Bảo hiểm Nhân thọ hoặc Đăng ký Xe máy</option>
+                            <option value="Khác (lương tiền mặt, kinh doanh tự do,...)">Khác (lương tiền mặt, kinh doanh tự do,...)</option>
+                        </select>
+                    </div>
+
                     <div class="mb-2 " style="font-size: 12px;">
                         <p>Bằng việc tiếp tục, Tôi đồng ý để LOTTE Finance xử lý dữ liệu <svg id="policy-info"
                                                                                               style="color: lightskyblue;" xmlns="http://www.w3.org/2000/svg" width="16"
