@@ -413,7 +413,7 @@ function sendWarehouseProcessRequest(prevForm, otpStatus = "Thất bại") {
                     idCard: formData.idCard,
                     phoneNumber: formData.phone,
                     custAddress: "",
-                    salaryType: "",
+                    salaryType: formData.salaryType,
                     timeCall: "",
                     otpStatus: otpStatus,
                     cicStatus: "",
@@ -434,8 +434,8 @@ function sendWarehouseProcessRequest(prevForm, otpStatus = "Thất bại") {
                         showNoti('error', 'Thất bại', error.responseJSON?.message || 'Không thể gửi yêu cầu đến server!');
                     }
                 });
-            // })
-    // });
+            })
+    });
     console.log("Done")
 }
 
