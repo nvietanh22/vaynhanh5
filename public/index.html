@@ -62,8 +62,12 @@
             <div class="slider-wrapper">
                 <div class="slider">
                     <div class="slide slide-video">
-                        <video autoplay loop muted playsinline>
-                            <source src="./images/vay4buoc2.mp4" type="video/mp4">
+                        <video class="d-none d-md-block" autoplay loop muted playsinline>
+                            <source src="./images/slide-bn-2.mp4" type="video/mp4">
+                        </video>
+                        <!-- Video cho Mobile -->
+                        <video class="d-block d-md-none" autoplay loop muted playsinline>
+                            <source src="./images/slide-bn-mb-2.mp4" type="video/mp4">
                         </video>
                     </div>
                     <!--                    <img src="./images/vay4buocmb.gif" alt="Banner Animation" class="mobile-gif">-->
@@ -150,8 +154,8 @@
             </div>
         </div>
 
-        <div class="slider-arrow left"></div>
-        <div class="slider-arrow right"></div>
+<!--        <div class="slider-arrow left"></div>-->
+<!--        <div class="slider-arrow right"></div>-->
     </section>
     <section class="register">
         <div class="row p-4">
@@ -1039,6 +1043,157 @@
             </div>
         </div>
     </section>
+
+    <section class="press-review mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 col-xs-12 col-sm-12">
+                    <p class="section-title">Báo chí nói về chúng tôi</p>
+                    <hr class="section-title_line">
+                </div>
+            </div>
+
+            <!-- Carousel cho Desktop (hiển thị 3 bài) -->
+            <div id="pressCarouselDesktop" class="carousel slide d-none d-md-block" data-bs-ride="carousel" >
+                <div class="carousel-inner">
+                    <!-- Slide 1 -->
+                    <div class="carousel-item active">
+                        <div class="row">
+                            <!-- Card 1 -->
+                            <div class="col-md-4 mb-3">
+                                <div class="card press-card h-100">
+                                    <img src="./images/news-paper-1.png" class="card-img-top" alt="Lotte Finance huong den nhom khach cong chuc">
+                                    <div class="card-body d-flex flex-column">
+                                        <h5 class="press-card-title">
+                                            <a href="https://vnexpress.net/lotte-finance-huong-den-nhom-khach-cong-chuc-vien-chuc-4802806.html" target="_blank" class="stretched-link text-decoration-none">Lotte Finance hướng đến nhóm khách công chức, viên chức</a>
+                                        </h5>
+                                        <p class="press-card-text flex-grow-1">Lotte Finance áp dụng nhiều ưu đãi, tăng hạn mức cho vay với khách hàng là công chức, viên chức hoặc người lao động đang hưởng lương từ ngân sách nhà nước...</p>
+                                        <p class="card-text mt-auto"><small class="text-muted">vnexpress.net</small></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Card 2 -->
+                            <div class="col-md-4 mb-3">
+                                <div class="card press-card h-100">
+                                    <img src="./images/news-paper-2.png" class="card-img-top" alt="Lotte Finance - Cho dua tai chinh">
+                                    <div class="card-body d-flex flex-column">
+                                        <h5 class="press-card-title">
+                                            <a href="https://dantri.com.vn/doi-song/lotte-finance-cho-dua-tai-chinh-cho-khach-hang-20240424150017040.htm" target="_blank" class="stretched-link text-decoration-none">LOTTE Finance - Chỗ dựa tài chính cho khách hàng</a>
+                                        </h5>
+                                        <p class="press-card-text flex-grow-1">(Dân trí) - Từ 8/4 đến 30/9/2024, LOTTE Finance mang đến khách hàng cơ hội sở hữu nhiều phần quà thiết thực, cùng các đặc quyền ưu đãi cho vay tiêu dùng hấp dẫn...</p>
+                                        <p class="card-text mt-auto"><small class="text-muted">dantri.com.vn</small></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Card 3 -->
+                            <div class="col-md-4 mb-3">
+                                <div class="card press-card h-100">
+                                    <img src="./images/news-paper-3.png" class="card-img-top" alt="Lotte Finance day manh dich vu">
+                                    <div class="card-body d-flex flex-column">
+                                        <h5 class="press-card-title">
+                                            <a href="https://vnexpress.net/lotte-finance-day-manh-dich-vu-tai-chinh-tieu-dung-4752632.html" target="_blank" class="stretched-link text-decoration-none">Lotte Finance đẩy mạnh dịch vụ tài chính tiêu dùng</a>
+                                        </h5>
+                                        <p class="press-card-text flex-grow-1">Sau khi được Ngân hàng Nhà nước chấp thuận tăng 68 triệu USD, nâng tổng vốn điều lệ lên hơn 4.186 tỷ đồng, Lotte Finance đẩy mạnh nhiều chương trình khuyến mại...</p>
+                                        <p class="card-text mt-auto"><small class="text-muted">vnexpress.net</small></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Carousel cho Mobile (hiển thị 1 bài) -->
+    <div id="pressCarouselMobile" class="carousel slide d-md-none">
+        <div class="carousel-inner">
+            <!-- Bài báo 1 -->
+            <div class="carousel-item active">
+                <div class="col-12 mb-3">
+                    <div class="card press-card h-100">
+                        <img src="./images/news-paper-1.png" class="card-img-top" alt="Lotte Finance huong den nhom khach cong chuc">
+                        <div class="card-body">
+                            <h5 class="press-card-title">
+                                <a href="https://vnexpress.net/lotte-finance-huong-den-nhom-khach-cong-chuc-vien-chuc-4802806.html" target="_blank" class="stretched-link">Lotte Finance hướng đến nhóm khách công chức, viên chức</a>
+                            </h5>
+                            <p class="press-card-text">Lotte Finance áp dụng nhiều ưu đãi, tăng hạn mức cho vay với khách hàng là công chức, viên chức hoặc người lao động đang hưởng lương từ ngân sách nhà nước...</p>
+                            <p class="card-text mt-auto"><small class="text-muted">vnexpress.net</small></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Bài báo 2 -->
+            <div class="carousel-item">
+                <div class="col-12 mb-3">
+                    <div class="card press-card h-100">
+                        <img src="./images/news-paper-2.png" class="card-img-top" alt="Lotte Finance - Cho dua tai chinh">
+                        <div class="card-body">
+                            <h5 class="press-card-title">
+                                <a href="https://dantri.com.vn/doi-song/lotte-finance-cho-dua-tai-chinh-cho-khach-hang-20240424150017040.htm" target="_blank" class="stretched-link">LOTTE Finance - Chỗ dựa tài chính cho khách hàng</a>
+                            </h5>
+                            <p class="press-card-text">(Dân trí) - Từ 8/4 đến 30/9/2024, LOTTE Finance mang đến khách hàng cơ hội sở hữu nhiều phần quà thiết thực, cùng các đặc quyền ưu đãi cho vay tiêu dùng hấp dẫn...</p>
+                            <p class="card-text mt-auto"><small class="text-muted">dantri.com.vn</small></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Bài báo 3 -->
+            <div class="carousel-item">
+                <div class="col-12 mb-3">
+                    <div class="card press-card h-100">
+                        <img src="./images/news-paper-3.png" class="card-img-top" alt="Lotte Finance day manh dich vu">
+                        <div class="card-body">
+                            <h5 class="press-card-title">
+                                <a href="https://vnexpress.net/lotte-finance-day-manh-dich-vu-tai-chinh-tieu-dung-4752632.html" target="_blank" class="stretched-link">Lotte Finance đẩy mạnh dịch vụ tài chính tiêu dùng</a>
+                            </h5>
+                            <p class="press-card-text">Sau khi được Ngân hàng Nhà nước chấp thuận tăng 68 triệu USD, nâng tổng vốn điều lệ lên hơn 4.186 tỷ đồng, Lotte Finance đẩy mạnh nhiều chương trình khuyến mại...</p>
+                            <p class="card-text mt-auto"><small class="text-muted">vnexpress.net</small></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--            &lt;!&ndash; Bài báo 4 (Mẫu) &ndash;&gt;-->
+            <!--            <div class="carousel-item">-->
+            <!--                <div class="col-12 mb-3">-->
+            <!--                    <div class="card press-card h-100">-->
+            <!--                        <img src="images/news-paper-1.jpg" class="card-img-top" alt="Tiêu đề bài báo 4">-->
+            <!--                        <div class="card-body">-->
+            <!--                            <h5 class="press-card-title">-->
+            <!--                                <a href="#" class="stretched-link">Tiêu đề bài báo thứ tư</a>-->
+            <!--                            </h5>-->
+            <!--                            <p class="press-card-text">Nội dung tóm tắt cho bài báo thứ tư. Bạn có thể thay thế nội dung và hình ảnh tại đây.</p>-->
+            <!--                            <p class="card-text mt-auto"><small class="text-muted">baomoi.com</small></p>-->
+            <!--                        </div>-->
+            <!--                    </div>-->
+            <!--                </div>-->
+            <!--            </div>-->
+            <!--            &lt;!&ndash; Bài báo 5 (Mẫu) &ndash;&gt;-->
+            <!--            <div class="carousel-item">-->
+            <!--                <div class="col-12 mb-3">-->
+            <!--                    <div class="card press-card h-100">-->
+            <!--                        <img src="images/news-paper-2.jpg" class="card-img-top" alt="Tiêu đề bài báo 5">-->
+            <!--                        <div class="card-body">-->
+            <!--                            <h5 class="press-card-title">-->
+            <!--                                <a href="#" class="stretched-link">Tiêu đề bài báo thứ năm</a>-->
+            <!--                            </h5>-->
+            <!--                            <p class="press-card-text">Nội dung tóm tắt cho bài báo thứ năm. Bạn có thể thay thế nội dung và hình ảnh tại đây.</p>-->
+            <!--                            <p class="card-text mt-auto"><small class="text-muted">cafef.vn</small></p>-->
+            <!--                        </div>-->
+            <!--                    </div>-->
+            <!--                </div>-->
+            <!--            </div>-->
+        </div>
+
+        <!-- Nút điều khiển tùy chỉnh -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#pressCarouselMobile" data-bs-slide="prev">
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#pressCarouselMobile" data-bs-slide="next">
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
     <section class="customer-comment-mobile mt-5">
         <div class="container">
             <div class="row">
@@ -1292,195 +1447,6 @@
     </section>
 
 
-    <section class="press-review mt-5">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12 col-xs-12 col-sm-12">
-                    <p class="section-title">Báo chí nói về chúng tôi</p>
-                    <hr class="section-title_line">
-                </div>
-            </div>
-
-            <!-- Carousel cho Desktop (hiển thị 3 bài) -->
-            <div id="pressCarouselDesktop" class="carousel slide d-none d-md-block" data-bs-ride="carousel" >
-                <div class="carousel-inner">
-                    <!-- Slide 1 -->
-                    <div class="carousel-item active">
-                        <div class="row">
-                            <!-- Card 1 -->
-                            <div class="col-md-4 mb-3">
-                                <div class="card press-card h-100">
-                                    <img src="./images/news-paper-1.png" class="card-img-top" alt="Lotte Finance huong den nhom khach cong chuc">
-                                    <div class="card-body d-flex flex-column">
-                                        <h5 class="press-card-title">
-                                            <a href="https://vnexpress.net/lotte-finance-huong-den-nhom-khach-cong-chuc-vien-chuc-4802806.html" target="_blank" class="stretched-link text-decoration-none">Lotte Finance hướng đến nhóm khách công chức, viên chức</a>
-                                        </h5>
-                                        <p class="press-card-text flex-grow-1">Lotte Finance áp dụng nhiều ưu đãi, tăng hạn mức cho vay với khách hàng là công chức, viên chức hoặc người lao động đang hưởng lương từ ngân sách nhà nước...</p>
-                                        <p class="card-text mt-auto"><small class="text-muted">vnexpress.net</small></p>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Card 2 -->
-                            <div class="col-md-4 mb-3">
-                                <div class="card press-card h-100">
-                                    <img src="./images/news-paper-2.png" class="card-img-top" alt="Lotte Finance - Cho dua tai chinh">
-                                    <div class="card-body d-flex flex-column">
-                                        <h5 class="press-card-title">
-                                            <a href="https://dantri.com.vn/doi-song/lotte-finance-cho-dua-tai-chinh-cho-khach-hang-20240424150017040.htm" target="_blank" class="stretched-link text-decoration-none">LOTTE Finance - Chỗ dựa tài chính cho khách hàng</a>
-                                        </h5>
-                                        <p class="press-card-text flex-grow-1">(Dân trí) - Từ 8/4 đến 30/9/2024, LOTTE Finance mang đến khách hàng cơ hội sở hữu nhiều phần quà thiết thực, cùng các đặc quyền ưu đãi cho vay tiêu dùng hấp dẫn...</p>
-                                        <p class="card-text mt-auto"><small class="text-muted">dantri.com.vn</small></p>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Card 3 -->
-                            <div class="col-md-4 mb-3">
-                                <div class="card press-card h-100">
-                                    <img src="./images/news-paper-3.png" class="card-img-top" alt="Lotte Finance day manh dich vu">
-                                    <div class="card-body d-flex flex-column">
-                                        <h5 class="press-card-title">
-                                            <a href="https://vnexpress.net/lotte-finance-day-manh-dich-vu-tai-chinh-tieu-dung-4752632.html" target="_blank" class="stretched-link text-decoration-none">Lotte Finance đẩy mạnh dịch vụ tài chính tiêu dùng</a>
-                                        </h5>
-                                        <p class="press-card-text flex-grow-1">Sau khi được Ngân hàng Nhà nước chấp thuận tăng 68 triệu USD, nâng tổng vốn điều lệ lên hơn 4.186 tỷ đồng, Lotte Finance đẩy mạnh nhiều chương trình khuyến mại...</p>
-                                        <p class="card-text mt-auto"><small class="text-muted">vnexpress.net</small></p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Slide 2 (cho bài 4 & 5) -->
-                    <!--                    <div class="carousel-item">-->
-                    <!--                        <div class="row">-->
-                    <!--                            &lt;!&ndash; Card 4 (Mẫu) &ndash;&gt;-->
-                    <!--                            <div class="col-md-4 mb-3">-->
-                    <!--                                <div class="card press-card h-100 ">-->
-                    <!--                                    <img src="images/news-paper-1.jpg" class="card-img-top" alt="Tiêu đề bài báo 4">-->
-                    <!--                                    <div class="card-body d-flex flex-column">-->
-                    <!--                                        <h5 class="press-card-title">-->
-                    <!--                                            <a href="#" class="stretched-link text-decoration-none">Tiêu đề bài báo thứ tư</a>-->
-                    <!--                                        </h5>-->
-                    <!--                                        <p class="press-card-text flex-grow-1">Nội dung tóm tắt cho bài báo thứ tư. Bạn có thể thay thế nội dung và hình ảnh tại đây.</p>-->
-                    <!--                                        <p class="card-text mt-auto"><small class="text-muted">baomoi.com</small></p>-->
-                    <!--                                    </div>-->
-                    <!--                                </div>-->
-                    <!--                            </div>-->
-                    <!--                            &lt;!&ndash; Card 5 (Mẫu) &ndash;&gt;-->
-                    <!--                            <div class="col-md-4 mb-3">-->
-                    <!--                                <div class="card press-card h-100">-->
-                    <!--                                    <img src="images/news-paper-2.jpg" class="card-img-top" alt="Tiêu đề bài báo 5">-->
-                    <!--                                    <div class="card-body d-flex flex-column">-->
-                    <!--                                        <h5 class="press-card-title">-->
-                    <!--                                            <a href="#" class="stretched-link text-decoration-none">Tiêu đề bài báo thứ năm</a>-->
-                    <!--                                        </h5>-->
-                    <!--                                        <p class="press-card-text flex-grow-1">Nội dung tóm tắt cho bài báo thứ năm. Bạn có thể thay thế nội dung và hình ảnh tại đây.</p>-->
-                    <!--                                        <p class="card-text mt-auto"><small class="text-muted">cafef.vn</small></p>-->
-                    <!--                                    </div>-->
-                    <!--                                </div>-->
-                    <!--                            </div>-->
-                    <!--                        </div>-->
-                    <!--                    </div>-->
-                </div>
-                <!--                <button class="carousel-control-prev" type="button" data-bs-target="#pressCarouselDesktop" data-bs-slide="prev">-->
-                <!--                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>-->
-                <!--                    <span class="visually-hidden">Previous</span>-->
-                <!--                </button>-->
-                <!--                <button class="carousel-control-next" type="button" data-bs-target="#pressCarouselDesktop" data-bs-slide="next">-->
-                <!--                    <span class="carousel-control-next-icon" aria-hidden="true"></span>-->
-                <!--                    <span class="visually-hidden">Next</span>-->
-                <!--                </button>-->
-            </div>
-        </div>
-    </section>
-
-    <!-- Carousel cho Mobile (hiển thị 1 bài) -->
-    <div id="pressCarouselMobile" class="carousel slide d-md-none">
-        <div class="carousel-inner">
-            <!-- Bài báo 1 -->
-            <div class="carousel-item active">
-                <div class="col-12 mb-3">
-                    <div class="card press-card h-100">
-                        <img src="./images/news-paper-1.png" class="card-img-top" alt="Lotte Finance huong den nhom khach cong chuc">
-                        <div class="card-body">
-                            <h5 class="press-card-title">
-                                <a href="https://vnexpress.net/lotte-finance-huong-den-nhom-khach-cong-chuc-vien-chuc-4802806.html" target="_blank" class="stretched-link">Lotte Finance hướng đến nhóm khách công chức, viên chức</a>
-                            </h5>
-                            <p class="press-card-text">Lotte Finance áp dụng nhiều ưu đãi, tăng hạn mức cho vay với khách hàng là công chức, viên chức hoặc người lao động đang hưởng lương từ ngân sách nhà nước...</p>
-                            <p class="card-text mt-auto"><small class="text-muted">vnexpress.net</small></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Bài báo 2 -->
-            <div class="carousel-item">
-                <div class="col-12 mb-3">
-                    <div class="card press-card h-100">
-                        <img src="./images/news-paper-2.png" class="card-img-top" alt="Lotte Finance - Cho dua tai chinh">
-                        <div class="card-body">
-                            <h5 class="press-card-title">
-                                <a href="https://dantri.com.vn/doi-song/lotte-finance-cho-dua-tai-chinh-cho-khach-hang-20240424150017040.htm" target="_blank" class="stretched-link">LOTTE Finance - Chỗ dựa tài chính cho khách hàng</a>
-                            </h5>
-                            <p class="press-card-text">(Dân trí) - Từ 8/4 đến 30/9/2024, LOTTE Finance mang đến khách hàng cơ hội sở hữu nhiều phần quà thiết thực, cùng các đặc quyền ưu đãi cho vay tiêu dùng hấp dẫn...</p>
-                            <p class="card-text mt-auto"><small class="text-muted">dantri.com.vn</small></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Bài báo 3 -->
-            <div class="carousel-item">
-                <div class="col-12 mb-3">
-                    <div class="card press-card h-100">
-                        <img src="./images/news-paper-3.png" class="card-img-top" alt="Lotte Finance day manh dich vu">
-                        <div class="card-body">
-                            <h5 class="press-card-title">
-                                <a href="https://vnexpress.net/lotte-finance-day-manh-dich-vu-tai-chinh-tieu-dung-4752632.html" target="_blank" class="stretched-link">Lotte Finance đẩy mạnh dịch vụ tài chính tiêu dùng</a>
-                            </h5>
-                            <p class="press-card-text">Sau khi được Ngân hàng Nhà nước chấp thuận tăng 68 triệu USD, nâng tổng vốn điều lệ lên hơn 4.186 tỷ đồng, Lotte Finance đẩy mạnh nhiều chương trình khuyến mại...</p>
-                            <p class="card-text mt-auto"><small class="text-muted">vnexpress.net</small></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!--            &lt;!&ndash; Bài báo 4 (Mẫu) &ndash;&gt;-->
-            <!--            <div class="carousel-item">-->
-            <!--                <div class="col-12 mb-3">-->
-            <!--                    <div class="card press-card h-100">-->
-            <!--                        <img src="images/news-paper-1.jpg" class="card-img-top" alt="Tiêu đề bài báo 4">-->
-            <!--                        <div class="card-body">-->
-            <!--                            <h5 class="press-card-title">-->
-            <!--                                <a href="#" class="stretched-link">Tiêu đề bài báo thứ tư</a>-->
-            <!--                            </h5>-->
-            <!--                            <p class="press-card-text">Nội dung tóm tắt cho bài báo thứ tư. Bạn có thể thay thế nội dung và hình ảnh tại đây.</p>-->
-            <!--                            <p class="card-text mt-auto"><small class="text-muted">baomoi.com</small></p>-->
-            <!--                        </div>-->
-            <!--                    </div>-->
-            <!--                </div>-->
-            <!--            </div>-->
-            <!--            &lt;!&ndash; Bài báo 5 (Mẫu) &ndash;&gt;-->
-            <!--            <div class="carousel-item">-->
-            <!--                <div class="col-12 mb-3">-->
-            <!--                    <div class="card press-card h-100">-->
-            <!--                        <img src="images/news-paper-2.jpg" class="card-img-top" alt="Tiêu đề bài báo 5">-->
-            <!--                        <div class="card-body">-->
-            <!--                            <h5 class="press-card-title">-->
-            <!--                                <a href="#" class="stretched-link">Tiêu đề bài báo thứ năm</a>-->
-            <!--                            </h5>-->
-            <!--                            <p class="press-card-text">Nội dung tóm tắt cho bài báo thứ năm. Bạn có thể thay thế nội dung và hình ảnh tại đây.</p>-->
-            <!--                            <p class="card-text mt-auto"><small class="text-muted">cafef.vn</small></p>-->
-            <!--                        </div>-->
-            <!--                    </div>-->
-            <!--                </div>-->
-            <!--            </div>-->
-        </div>
-
-        <!-- Nút điều khiển tùy chỉnh -->
-        <button class="carousel-control-prev" type="button" data-bs-target="#pressCarouselMobile" data-bs-slide="prev">
-            <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#pressCarouselMobile" data-bs-slide="next">
-            <span class="visually-hidden">Next</span>
-        </button>
-    </div>
-
     <section class="company-info mt-5" id="abouts">
         <div class="company-info-bg-left"></div>
         <div class="company-info-bg-right"></div>
@@ -1520,30 +1486,30 @@
 
             </div>
         </div>
-        <div id="customer-counter-wrapper" class="d-none d-md-block">
-            <div id="customer-counter-inner">
-                <img src="./images/icon-face.gif" alt="Happy customer icon" class="counter-icon">
-                <div class="counter-text-group">
-                    <div id="scrolling-counter" class="scrolling-counter"></div>
-                    <p class="counter-text">Khách hàng đã đăng ký vay tại LOTTE Finance</p>
-                </div>
-            </div>
-        </div>
+<!--        <div id="customer-counter-wrapper" class="d-none d-md-block">-->
+<!--            <div id="customer-counter-inner">-->
+<!--                <img src="./images/icon-face.gif" alt="Happy customer icon" class="counter-icon">-->
+<!--                <div class="counter-text-group">-->
+<!--                    <div id="scrolling-counter" class="scrolling-counter"></div>-->
+<!--                    <p class="counter-text">Khách hàng đã đăng ký vay tại LOTTE Finance</p>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
     </section>
     <section class="partner-logos-mobile d-block d-md-none">
         <img src="images/image-1-20240219042009-gfev2.png"
              alt="Các đối tác chiến lược của LOTTE Finance"
              class="partner-logos-image">
 
-        <div id="customer-counter-wrapper-mobile" class="d-block d-md-none">
-            <div id="customer-counter-inner-mobile">
-                <img src="./images/icon-face.gif" alt="Happy customer icon" class="counter-icon">
-                <div class="counter-text-group">
-                    <div id="scrolling-counter-mobile" class="scrolling-counter"></div>
-                    <p class="counter-text">Khách hàng đã đăng ký vay tại LOTTE Finance</p>
-                </div>
-            </div>
-        </div>
+<!--        <div id="customer-counter-wrapper-mobile" class="d-block d-md-none">-->
+<!--            <div id="customer-counter-inner-mobile">-->
+<!--                <img src="./images/icon-face.gif" alt="Happy customer icon" class="counter-icon">-->
+<!--                <div class="counter-text-group">-->
+<!--                    <div id="scrolling-counter-mobile" class="scrolling-counter"></div>-->
+<!--                    <p class="counter-text">Khách hàng đã đăng ký vay tại LOTTE Finance</p>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
     </section>
     <section class="question-info" id="qa">
         <div class="question-info-bg"></div>
@@ -2199,6 +2165,15 @@
     <div id="fixed-mobile-cta-wrapper" class="d-block d-md-none">
         <button id="fixed-mobile-cta">Đăng ký ngay</button>
     </div>
+    <div id="customer-counter-wrapper">
+        <div id="customer-counter-inner">
+            <img src="./images/icon-cash-inhand.png" alt="Happy customer icon" class="counter-icon">
+            <div class="counter-text-group">
+                <div id="scrolling-counter" class="scrolling-counter"></div>
+                <p class="counter-text">Khách hàng đã đăng ký vay tại LOTTE Finance</p>
+            </div>
+        </div>
+    </div>
     <div id="loading"></div>
     <script type="text/javascript" src="js/dist/jquery.min.js"></script>
     <script type="text/javascript" src="js/dist/bootstrap.bundle.min.js"></script>
@@ -2281,7 +2256,7 @@
                 transform: translate(-50%, -50%);
                 min-width: 100%;
                 min-height: 100%;
-                width: auto;
+                width: 100%;
                 height: auto;
             }
             .slide-static {
@@ -2291,13 +2266,32 @@
 
 
         @media (max-width: 767px) {
-            .slide-video video {
-                display: none;
-            }
-            .slide-video {
+            /*.slide-video video {*/
+            /*    display: none;*/
+            /*}*/
+            /*.slide-video {*/
 
-                background-image: url('./images/vay4buocmb.gif');
+            /*    background-image: url('./images/vay4buocmb.gif');*/
+            /*}*/
+
+            .slide-video video.d-none.d-md-block {
+                display: none !important;
             }
+            .slide-video video.d-block.d-md-none {
+                display: block !important;
+            }
+            .slide-static {
+
+                background-image: url('./images/banner-mobile.png');
+            }
+
+            .slide-video video.d-block.d-md-none {
+                object-fit: cover;
+                height: 100%;
+                width: 100%;
+
+            }
+
             .slide-static {
 
                 background-image: url('./images/banner-mobile.png');
@@ -2348,6 +2342,16 @@
             transform-style: preserve-3d;
             border-radius: 55px;
         }
+
+        .flip-card-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            transition: transform 0.6s ease-in-out; /* <-- Đã thay đổi */
+            transform-style: preserve-3d;
+            border-radius: 55px;
+        }
+
         /*.flip-card:hover .flip-card-inner,*/
         /*.flip-card.is-flipped .flip-card-inner {*/
         /*    transform: rotateY(180deg);*/
@@ -2413,17 +2417,14 @@
             width: 100%; height: 100%;
             background: transparent;
             border-radius: 55px;
-            transition: transform 0.4s cubic-bezier(0.4,0.2,0.2,1), opacity 0.3s;
-            transform: translateY(40%);
-            opacity: 0.5;
             z-index: 2;
             padding: 40px 35px;
         }
-        .flip-card:hover .flip-card-back .back-content-wrapper,
-        .flip-card.is-flipped .flip-card-back .back-content-wrapper {
-            transform: translateY(0);
-            opacity: 1;
-        }
+        /*.flip-card:hover .flip-card-back .back-content-wrapper,*/
+        /*.flip-card.is-flipped .flip-card-back .back-content-wrapper {*/
+        /*    transform: translateY(0);*/
+        /*    opacity: 1;*/
+        /*}*/
 
 
         .flip-card-back .back-icon {
@@ -2580,24 +2581,29 @@
         #fixed-register-button {
             position: fixed;
             left: 40px;
-            bottom: 40px;
+            bottom: 100px;
             z-index: 9000;
             cursor: pointer;
-            /*transition: transform 0.2s ease;*/
-            width: 194.75px;
-            height: 54px;
+            width: 220px;
+            height: 77.75px;
         }
 
+        #fixed-register-button img {
+            width: 100%;
+            height: 100%;
+            object-fit: fill;
+        }
+
+
         #customer-counter-wrapper {
-            position: absolute;
-            z-index: 10;
+            position: fixed;
+            z-index: 8999;
             padding: 3px;
             border-radius: 100px;
             background: linear-gradient(to right, #CC002E, #EC1848, #9A268F);
             box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
-            top: 330px;
-            right: 32%;
-
+            left: 40px;
+            bottom: 15px;
         }
 
         #customer-counter-inner {
@@ -2607,13 +2613,13 @@
             background-color: #fff;
             padding: 12px 17px;
             border-radius: inherit;
-            width: 224.06px;
-            height: 81.26px;
+            width: 214px;
+            height: 71.76px;
         }
 
         .counter-icon {
-            width: 60.52px;
-            height: 60.52px;
+            width: 50.71px;
+            height: 50.71px;
             flex-shrink: 0;
         }
 
@@ -2658,11 +2664,45 @@
 
         .counter-text {
             font-size: 10.19px;
-            color: #333;
+            color: #333333;
             line-height: 1.4;
             max-width: 200px;
             margin-top: 4px;
         }
+
+        @keyframes shake {
+            10%, 90% { transform: rotate(-3deg); }
+            20%, 80% { transform: rotate(3deg); }
+            30%, 50%, 70% { transform: rotate(-3deg); }
+            40%, 60% { transform: rotate(3deg); }
+            0%, 100% { transform: rotate(0); }
+        }
+
+        @keyframes shake {
+            10%, 90% { transform: rotate(-3deg); }
+            20%, 80% { transform: rotate(3deg); }
+            30%, 50%, 70% { transform: rotate(-3deg); }
+            40%, 60% { transform: rotate(3deg); }
+            0%, 100% { transform: rotate(0); }
+        }
+
+        @keyframes breathing-glow {
+            0%, 100% {
+                filter: drop-shadow(0 0 10px rgb(255, 0, 0)) drop-shadow(0 0 4px rgb(231, 37, 43));
+            }
+            50% {
+                filter: drop-shadow(0 0 14px rgb(255, 215, 0)) drop-shadow(0 0 6px rgb(255, 223, 50));
+            }
+        }
+
+        #fixed-register-button {
+            animation:
+                    shake 4s cubic-bezier(.36,.07,.19,.97) infinite,
+                    breathing-glow 3s ease-in-out infinite;
+
+            transform-origin: center center;
+        }
+
 
         .partner-logos-mobile {
             line-height: 0;
@@ -2792,6 +2832,19 @@
                 right: -10px;
             }
 
+            #customer-counter-wrapper {
+                position: absolute;
+                z-index: 10;
+                padding: 3px;
+                border-radius: 100px;
+                background: linear-gradient(to right, #CC002E, #EC1848, #9A268F);
+                box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+                /*bottom: 10780px;*/
+                bottom: 63px;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+
         }
 
         .partner-logos-mobile {
@@ -2893,12 +2946,8 @@
             const bannerSection = document.querySelector('section.banner');
             if (bannerSection) {
                 const slider = bannerSection.querySelector('.slider');
-                const prevButton = bannerSection.querySelector('.slider-arrow.left');
-                const nextButton = bannerSection.querySelector('.slider-arrow.right');
                 const slides = Array.from(bannerSection.querySelectorAll('.slide'));
-
-                if (slider && prevButton && nextButton && slides.length > 0) {
-                    // --- Infinite Slider Logic ---
+                if (slider && slides.length > 0) {
                     const firstClone = slides[0].cloneNode(true);
                     const lastClone = slides[slides.length - 1].cloneNode(true);
                     slider.appendChild(firstClone);
@@ -2943,26 +2992,15 @@
                         updateSliderPosition();
                     }
 
-                    function moveToPrev() {
-                        if (isTransitioning) return;
-                        isTransitioning = true;
-                        currentIndex--;
-                        updateSliderPosition();
-                    }
-
-                    nextButton.addEventListener('click', moveToNext);
-                    prevButton.addEventListener('click', moveToPrev);
 
                     let autoSlideInterval = null;
-                    function checkAndRunAutoSlide() {
+                    function startAutoSlide() {
                         if (autoSlideInterval) clearInterval(autoSlideInterval);
-                        autoSlideInterval = null;
-                        if (window.innerWidth <= 767) {
-                            autoSlideInterval = setInterval(moveToNext, 14000);
-                        }
+                        autoSlideInterval = setInterval(moveToNext, 5000);
                     }
-                    checkAndRunAutoSlide();
-                    window.addEventListener('resize', checkAndRunAutoSlide);
+
+                    startAutoSlide();
+                    window.addEventListener('resize', startAutoSlide);
                     updateSliderPosition(false);
                 }
             }
@@ -2970,35 +3008,39 @@
 
             //BỘ ĐẾM kh
             const initializeCounter = (widgetSelector, containerSelector) => {
-                const counterWidget = document.querySelector(widgetSelector);
-                const counterContainer = document.querySelector(containerSelector);
+                const counterWidget = document.getElementById('customer-counter-wrapper');
+                const counterContainer = document.getElementById('scrolling-counter');
+                let continuousUpdateInterval = null;
 
                 if (counterWidget && counterContainer) {
-                    const startDate = new Date('2025-06-26T00:00:00+07:00');
+                    const startDate = new Date('2025-08-06T00:00:00+07:00');
                     const startValue = 396750;
                     const incrementPerDay = 30810;
                     const maxValue = 1000000;
+                    const MS_PER_DAY = 86400000;
 
-                    const calculateCurrentValue = () => {
+                    const calculatePreciseCurrentValue = () => {
                         const now = new Date();
-                        const elapsedTime = now.getTime() - startDate.getTime();
-                        const elapsedDays = Math.floor(elapsedTime / (1000 * 60 * 60 * 24));
-                        const addedValue = elapsedDays * incrementPerDay;
-                        return Math.min(startValue + addedValue, maxValue);
+                        const todayStart = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+                        const elapsedFullDays = Math.max(0, Math.floor((todayStart.getTime() - startDate.getTime()) / MS_PER_DAY));
+                        const baseValueForToday = startValue + (elapsedFullDays * incrementPerDay);
+                        const msPassedToday = now.getTime() - todayStart.getTime();
+                        const fractionOfDayPassed = msPassedToday / MS_PER_DAY;
+                        const incrementToday = fractionOfDayPassed * incrementPerDay;
+                        let finalValue = baseValueForToday + incrementToday;
+                        return Math.min(finalValue, maxValue);
                     };
 
-                    const finalValue = calculateCurrentValue();
-                    const finalValueString = finalValue.toLocaleString('de-DE');
-                    const digitHeight = parseInt(window.getComputedStyle(counterContainer).height, 10);
-
-                    const createCounter = (valueString) => {
+                    const createCounterStructure = (valueString) => {
                         counterContainer.innerHTML = '';
                         for (let char of valueString) {
                             if (!isNaN(parseInt(char))) {
                                 const digitRoller = document.createElement('div');
                                 digitRoller.className = 'digit-roller';
                                 let innerHTML = '';
-                                for (let i = 0; i <= 9; i++) innerHTML += `<span>${i}</span>`;
+                                for (let i = 0; i <= 9; i++) {
+                                    innerHTML += `<span>${i}</span>`;
+                                }
                                 digitRoller.innerHTML = innerHTML;
                                 counterContainer.appendChild(digitRoller);
                             } else {
@@ -3010,28 +3052,49 @@
                         }
                     };
 
-                    const scrollToFinalValue = (valueString) => {
+                    const updateCounterDisplay = (targetValue) => {
+                        const targetString = Math.floor(targetValue).toLocaleString('de-DE');
+                        const digitHeight = 30;
+
+                        // Chỉ tạo lại cấu trúc nếu số ký tự thay đổi
+                        if (targetString.length !== counterContainer.children.length) {
+                            createCounterStructure(targetString);
+                        }
+
                         const digitRollers = counterContainer.querySelectorAll('.digit-roller');
                         let rollerIndex = 0;
-                        for (let char of valueString) {
+                        for (let char of targetString) {
                             if (!isNaN(parseInt(char))) {
                                 const digit = parseInt(char);
                                 const roller = digitRollers[rollerIndex];
-                                if (roller) roller.style.transform = `translateY(-${digit * digitHeight}px)`;
+                                if (roller) {
+                                    roller.style.transition = 'transform 0.8s ease-out';
+                                    roller.style.transform = `translateY(-${digit * digitHeight}px)`;
+                                }
                                 rollerIndex++;
                             }
                         }
                     };
 
-                    createCounter(finalValueString);
-                    const observer = new IntersectionObserver((entries, observer) => {
+                    const initialValue = calculatePreciseCurrentValue();
+                    createCounterStructure(Math.floor(initialValue).toLocaleString('de-DE'));
+                    updateCounterDisplay(initialValue);
+                    const observer = new IntersectionObserver((entries) => {
                         entries.forEach(entry => {
                             if (entry.isIntersecting) {
-                                setTimeout(() => scrollToFinalValue(finalValueString), 100);
-                                observer.unobserve(entry.target);
+                                if (!continuousUpdateInterval) {
+                                    continuousUpdateInterval = setInterval(() => {
+                                        const newValue = calculatePreciseCurrentValue();
+                                        updateCounterDisplay(newValue);
+                                    }, 1000);
+                                }
+                            } else {
+                                clearInterval(continuousUpdateInterval);
+                                continuousUpdateInterval = null;
                             }
                         });
-                    }, { threshold: 0.8 });
+                    }, { threshold: 0.1 });
+
                     observer.observe(counterWidget);
                 }
             };
