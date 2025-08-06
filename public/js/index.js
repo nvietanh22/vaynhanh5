@@ -152,32 +152,31 @@ btnSubmitMobile.addEventListener("click", (event) => {
 async function genOtp(prevForm) {
     isOtpFailed = false;
     hideBackpop();
-    // grecaptcha.ready(function () {
-    //     grecaptcha
-    //         .execute("GOOGLE_SITE_KEY_TEMP", {action: "submit"})
-    //         .then(function (token) {
+    grecaptcha.ready(function () {
+        grecaptcha
+            .execute("GOOGLE_SITE_KEY_TEMP", {action: "submit"})
+            .then(function (token) {
                 $('#loading').show();
-                let validateUrl = `http://localhost:8080/api/lead/validate`;
+                let validateUrl = `${env.backEndApi}/api/lead/validate`;
                 let formData = $(prevForm).getValue();
                 let dataValidate = {
                     request_id: uuidv4(),
                     contact_number: formData.phone,
                 }
-                debugger
                 lib.post({
                     url: validateUrl,
-                    // token: token,
+                    token: token,
                     data: JSON.stringify(dataValidate),
                     complete: function (response) {
                         $('#loading').hide();
                         let dataRes = response.responseJSON;
                         if (dataRes.rslt_cd === 's' && dataRes.reason_code === '0') {
-                            // grecaptcha.ready(function () {
-                            //     grecaptcha
-                            //         .execute("GOOGLE_SITE_KEY_TEMP", {action: "submit"})
-                            //         .then(function (token) {
+                            grecaptcha.ready(function () {
+                                grecaptcha
+                                    .execute("GOOGLE_SITE_KEY_TEMP", {action: "submit"})
+                                    .then(function (token) {
                                         $('#loading').show();
-                                        let urlOtp = `http://localhost:8080/api/otp/gen-otp`;
+                                        let urlOtp = `${env.backEndApi}/api/otp/gen-otp`;
                                         let formData = $(prevForm).getValue();
                                         let dataOtp = {
                                             TransId: uuidv4(),
@@ -189,7 +188,7 @@ async function genOtp(prevForm) {
 
                                         lib.post({
                                             url: urlOtp,
-                                            // token: token,
+                                            token: token,
                                             data: JSON.stringify(dataOtp),
                                             complete: function (response) {
                                                 console.log('Response otp', response)
@@ -220,16 +219,16 @@ async function genOtp(prevForm) {
                                             },
                                             error: function (ex) {
                                                 if (prevForm == '#form-submit' || prevForm == '#FORM_TEXT25' || prevForm == '#form-submit-mobile') {
-                                                    showNotiDefault('error', 'Thất bại', ex.responseJSON ? ex.responseJSON.errorMessage : 'Đăng ký chưa thành công11111111, vui lòng kiểm tra lại thông tin');
+                                                    showNotiDefault('error', 'Thất bại', ex.responseJSON ? ex.responseJSON.errorMessage : 'Đăng ký chưa thành công, vui lòng kiểm tra lại thông tin');
                                                 } else {
-                                                    showNoti('error', 'Thất bại', ex.responseJSON ? ex.responseJSON.errorMessage : 'Đăng ký chưa thành công2222222, vui lòng kiểm tra lại thông tin');
+                                                    showNoti('error', 'Thất bại', ex.responseJSON ? ex.responseJSON.errorMessage : 'Đăng ký chưa thành công, vui lòng kiểm tra lại thông tin');
                                                 }
 
                                                 $('#loading').hide();
                                             },
                                         });
-                                    // });
-                            // });
+                                    });
+                            });
                         } else {
                             if (prevForm == '#form-submit' || prevForm == '#FORM_TEXT25' || prevForm == '#form-submit-mobile') {
                                 showNotiDefault('error', 'Thất bại', 'Số điện thoại của Quý khách đã có trong hệ thống của chúng tôi, Vui lòng gọi Hotline 1900 633 070 để được hỗ trợ!');
@@ -243,16 +242,16 @@ async function genOtp(prevForm) {
                     error: function (ex) {
                         if (prevForm == '#form-submit' || prevForm == '#FORM_TEXT25' || prevForm == '#form-submit-mobile') {
                             showNotiDefault('error', 'Thất bại', ex.responseJSON && ex.responseJSON.rslt_cd == 'f' ? 'Số điện thoại của Quý khách đã có trong hệ thống của chúng tôi, Vui lòng gọi Hotline 1900 633 070 để được hỗ trợ!'
-                                : 'Đăng ký chưa thành công333333, vui lòng kiểm tra lại thông tin!');
+                                : 'Đăng ký chưa thành công, vui lòng kiểm tra lại thông tin!');
                         } else {
                             showNoti('error', 'Thất bại', ex.responseJSON && ex.responseJSON.rslt_cd == 'f' ? 'Số điện thoại của Quý khách đã có trong hệ thống của chúng tôi, Vui lòng gọi Hotline 1900 633 070 để được hỗ trợ!'
-                                : 'Đăng ký chưa thành công444444, vui lòng kiểm tra lại thông tin!');
+                                : 'Đăng ký chưa thành công, vui lòng kiểm tra lại thông tin!');
                         }
                         $('#loading').hide();
                     },
                 });
-            // })
-    // });
+            })
+    });
 }
 
 function verifyOtp(otpDegit) {
@@ -413,7 +412,7 @@ function sendWarehouseProcessRequest(prevForm, otpStatus = "Thất bại") {
                     idCard: formData.idCard,
                     phoneNumber: formData.phone,
                     custAddress: "",
-                    salaryType: "",
+                    salaryType: formData.salaryType,
                     timeCall: "",
                     otpStatus: otpStatus,
                     cicStatus: "",
@@ -421,10 +420,10 @@ function sendWarehouseProcessRequest(prevForm, otpStatus = "Thất bại") {
                     metadata: "",
                     createdDate: ""
                 };
-                let url = `http://localhost:8080/api/warehouse/process`;
+                let url = `${env.backEndApi}/api/warehouse/process`;
                 lib.post({
                     url: url,
-                    // token: token,
+                    token: token,
                     data: JSON.stringify(requestData),
                     complete: function (response) {
                         $('#loading').hide();
@@ -434,348 +433,342 @@ function sendWarehouseProcessRequest(prevForm, otpStatus = "Thất bại") {
                         showNoti('error', 'Thất bại', error.responseJSON?.message || 'Không thể gửi yêu cầu đến server!');
                     }
                 });
-                // })
-                // });
-                console.log("Done")
             })
     });
+    console.log("Done")
 }
 
-    btnChangePhone.addEventListener("click", () => {
-        hideModal();
-    });
+btnChangePhone.addEventListener("click", () => {
+    hideModal();
+});
 
-    function uuidv4() {
-        return "10000000-1000-4000-8000-100000000000".replace(/[018]/g, (c) =>
-            (
-                c ^
-                (crypto.getRandomValues(new Uint8Array(1))[0] & (15 >> (c / 4)))
-            ).toString(16)
-        );
+function uuidv4() {
+    return "10000000-1000-4000-8000-100000000000".replace(/[018]/g, (c) =>
+        (
+            c ^
+            (crypto.getRandomValues(new Uint8Array(1))[0] & (15 >> (c / 4)))
+        ).toString(16)
+    );
+}
+
+function hideModal() {
+    clearInterval(countdownInterval);
+    myModal.hide();
+}
+
+function validate(formData) {
+    let rs = {
+        valid: true,
+        msg: "",
+    };
+
+    let message = "";
+    let comma = "";
+    if (!formData.idCard) {
+        rs.valid = false;
+        message += `${comma} Số CCCD là bắt buộc`;
+        comma = ', ';
+    } else if (!lib.validateIdCard(formData.idCard)) {
+        rs.valid = false;
+        message += `${comma} Số CCCD không đúng định dạng`;
+        comma = ', ';
+    } else if (!lib.validateIdCardToRegister(formData.idCard).isValid) {
+        rs.valid = false;
+        message += `${comma} Độ tuổi theo số CCCD của Quý khách không nằm trong độ tuổi được cung cấp khoản vay của LOTTE Finance`;
+        comma = ', ';
     }
 
-    function hideModal() {
-        clearInterval(countdownInterval);
-        myModal.hide();
+    if (!formData.name) {
+        rs.valid = false;
+        message += `${comma} Họ và Tên là bắt buộc`;
+        comma = ', ';
     }
 
-    function validate(formData) {
-        let rs = {
-            valid: true,
-            msg: "",
-        };
-
-        let message = "";
-        let comma = "";
-        if (!formData.idCard) {
-            rs.valid = false;
-            message += `${comma} Số CCCD là bắt buộc`;
-            comma = ', ';
-        } else if (!lib.validateIdCard(formData.idCard)) {
-            rs.valid = false;
-            message += `${comma} Số CCCD không đúng định dạng`;
-            comma = ', ';
-        } else if (!lib.validateIdCardToRegister(formData.idCard).isValid) {
-            rs.valid = false;
-            message += `${comma} Độ tuổi theo số CCCD của Quý khách không nằm trong độ tuổi được cung cấp khoản vay của LOTTE Finance`;
-            comma = ', ';
-        }
-
-        if (!formData.name) {
-            rs.valid = false;
-            message += `${comma} Họ và Tên là bắt buộc`;
-            comma = ', ';
-        }
-
-        if (!formData.phone) {
-            rs.valid = false;
-            message += `${comma} Số điện thoại là bắt buộc`;
-            comma = ', ';
-        } else if (!lib.validatePhoneNumber(formData.phone)) {
-            rs.valid = false;
-            message += `${comma} Số điện thoại không đúng định dạng`;
-            comma = ', ';
-        }
-        if (message != '') {
-            message += '. Quý khách vui lòng kiểm tra lại thông tin';
-        }
-        rs.msg = message;
-        return rs;
+    if (!formData.phone) {
+        rs.valid = false;
+        message += `${comma} Số điện thoại là bắt buộc`;
+        comma = ', ';
+    } else if (!lib.validatePhoneNumber(formData.phone)) {
+        rs.valid = false;
+        message += `${comma} Số điện thoại không đúng định dạng`;
+        comma = ', ';
     }
+    if (message != '') {
+        message += '. Quý khách vui lòng kiểm tra lại thông tin';
+    }
+    rs.msg = message;
+    return rs;
+}
 
 // === OTP
-    $('.otp-input').on('input', function () {
-        let regexNum = /^\d+$/;
-        let valueOtp = $(this).val();
-        if (!regexNum.test(valueOtp)) {
-            $(this).val(null)
-            return;
+$('.otp-input').on('input', function () {
+    let regexNum = /^\d+$/;
+    let valueOtp = $(this).val();
+    if (!regexNum.test(valueOtp)) {
+        $(this).val(null)
+        return;
+    }
+    if (valueOtp < 0) {
+        $(this).val(null)
+        return;
+    }
+
+    if (valueOtp > 9) {
+        $(this).val(null)
+        return;
+    }
+    // Move to the next input field when a digit is entered
+    var maxLength = parseInt($(this).attr('maxlength'));
+    var currentLength = $(this).val().length;
+
+    if (currentLength >= maxLength) {
+        // Find the next input field
+        var index = $('.otp-input').index(this);
+        var nextInput = $('.otp-input').eq(index + 1);
+
+        // Focus on the next input field
+        if (nextInput.length) {
+            nextInput.focus();
         }
-        if (valueOtp < 0) {
-            $(this).val(null)
-            return;
+    }
+    let code01 = $('#otp-01').val();
+    let code02 = $('#otp-02').val();
+    let code03 = $('#otp-03').val();
+    let code04 = $('#otp-04').val();
+    let code05 = $('#otp-05').val();
+    let code06 = $('#otp-06').val();
+
+    if (code01 && code02 && code03 && code04 && code05 && code06) {
+        let otpDegit = {
+            code01: code01,
+            code02: code02,
+            code03: code03,
+            code04: code04,
+            code05: code05,
+            code06: code06
         }
+        verifyOtp(otpDegit);
+    }
+});
 
-        if (valueOtp > 9) {
-            $(this).val(null)
-            return;
-        }
-        // Move to the next input field when a digit is entered
-        var maxLength = parseInt($(this).attr('maxlength'));
-        var currentLength = $(this).val().length;
+$("#myModal").on("hidden.bs.modal", function () {
+    $('#otp-01').val(null);
+    $('#otp-02').val(null);
+    $('#otp-03').val(null);
+    $('#otp-04').val(null);
+    $('#otp-05').val(null);
+    $('#otp-06').val(null);
+    $('#otp-01').focus();
+});
 
-        if (currentLength >= maxLength) {
-            // Find the next input field
-            var index = $('.otp-input').index(this);
-            var nextInput = $('.otp-input').eq(index + 1);
+function startCountdown() {
+    const countdownTimeInMinutes = 5;
+    const endTime = new Date().getTime() + countdownTimeInMinutes * 60 * 1000;
 
-            // Focus on the next input field
-            if (nextInput.length) {
-                nextInput.focus();
-            }
-        }
-        let code01 = $('#otp-01').val();
-        let code02 = $('#otp-02').val();
-        let code03 = $('#otp-03').val();
-        let code04 = $('#otp-04').val();
-        let code05 = $('#otp-05').val();
-        let code06 = $('#otp-06').val();
+    function updateCountdown() {
+        const currentTime = new Date().getTime();
+        const timeDifference = endTime - currentTime;
 
-        if (code01 && code02 && code03 && code04 && code05 && code06) {
-            let otpDegit = {
-                code01: code01,
-                code02: code02,
-                code03: code03,
-                code04: code04,
-                code05: code05,
-                code06: code06
-            }
-            verifyOtp(otpDegit);
-        }
-    });
+        if (timeDifference > 0) {
+            const minutes = Math.floor(
+                (timeDifference % (1000 * 60 * 60)) / (1000 * 60)
+            );
+            const seconds = Math.floor((timeDifference % (1000 * 60)) / 1000);
 
-    $("#myModal").on("hidden.bs.modal", function () {
-        $('#otp-01').val(null);
-        $('#otp-02').val(null);
-        $('#otp-03').val(null);
-        $('#otp-04').val(null);
-        $('#otp-05').val(null);
-        $('#otp-06').val(null);
-        $('#otp-01').focus();
-    });
-
-    function startCountdown() {
-        const countdownTimeInMinutes = 5;
-        const endTime = new Date().getTime() + countdownTimeInMinutes * 60 * 1000;
-
-        function updateCountdown() {
-            const currentTime = new Date().getTime();
-            const timeDifference = endTime - currentTime;
-
-            if (timeDifference > 0) {
-                const minutes = Math.floor(
-                    (timeDifference % (1000 * 60 * 60)) / (1000 * 60)
-                );
-                const seconds = Math.floor((timeDifference % (1000 * 60)) / 1000);
-
-                if (seconds < 10) {
-                    countdownElement.innerHTML = `${minutes}:0${seconds}`;
-                } else {
-                    countdownElement.innerHTML = `${minutes}:${seconds}`;
-                }
+            if (seconds < 10) {
+                countdownElement.innerHTML = `${minutes}:0${seconds}`;
             } else {
-                clearInterval(countdownInterval);
-                countdownElement.innerHTML = "Hết hạn nhập thông tin OTP!";
-                myModal.hide();
-            }
-        }
-
-        updateCountdown();
-        countdownInterval = setInterval(updateCountdown, 1000);
-
-    }
-
-
-    function changeStyleDropdown(arr) {
-        arr.forEach(item => {
-            $(`#${item.id}`).removeAttr('style')
-            $(`#${item.id}`).css(item.style)
-        })
-    }
-
-    function showNoti(type, title, message) {
-        modalNoti.show();
-        // myModal.hide();
-        $('#noti-title').text(title);
-        if (type == 'success') {
-            $('#noti-icon-error').addClass('d-none');
-            $('#noti-icon-success').removeClass('d-none');
-            $('#btn-close-noti').text('Đóng');
-            if ($("#lead-submit-success").length === 0) {
-                $("#lead-result").append("<p id='lead-submit-success'></p>");
+                countdownElement.innerHTML = `${minutes}:${seconds}`;
             }
         } else {
-            $('#noti-icon-success').addClass('d-none');
-            $('#noti-icon-error').removeClass('d-none');
-            $('#btn-close-noti').text('Quay lại');
-            $('#lead-result #lead-submit-success').remove();
+            clearInterval(countdownInterval);
+            countdownElement.innerHTML = "Hết hạn nhập thông tin OTP!";
+            myModal.hide();
         }
-        $('#noti-message').text(message)
     }
 
-    function showNotiDefault(type, title, message) {
-        modalNotiDefault.show();
-        // myModal.hide();
-        $('#noti-title-default').text(title);
-        if (type == 'success') {
-            $('#noti-icon-error-default').addClass('d-none');
-            $('#noti-icon-success-default').removeClass('d-none');
-            $('#btn-close-noti-default').text('Đóng');
-            if ($("#lead-submit-success").length === 0) {
-                $("#lead-result").append("<p id='lead-submit-success'></p>");
-            }
-        } else {
-            $('#noti-icon-success-default').addClass('d-none');
-            $('#noti-icon-error-default').removeClass('d-none');
-            $('#btn-close-noti-default').text('Quay lại');
-            $('#lead-result #lead-submit-success').remove();
+    updateCountdown();
+    countdownInterval = setInterval(updateCountdown, 1000);
+
+}
+
+
+function changeStyleDropdown(arr) {
+    arr.forEach(item => {
+        $(`#${item.id}`).removeAttr('style')
+        $(`#${item.id}`).css(item.style)
+    })
+}
+
+function showNoti(type, title, message) {
+    modalNoti.show();
+    // myModal.hide();
+    $('#noti-title').text(title);
+    if (type == 'success') {
+        $('#noti-icon-error').addClass('d-none');
+        $('#noti-icon-success').removeClass('d-none');
+        $('#btn-close-noti').text('Đóng');
+        if ($("#lead-submit-success").length === 0) {
+            $("#lead-result").append("<p id='lead-submit-success'></p>");
         }
-        $('#noti-message-default').text(message)
+    } else {
+        $('#noti-icon-success').addClass('d-none');
+        $('#noti-icon-error').removeClass('d-none');
+        $('#btn-close-noti').text('Quay lại');
+        $('#lead-result #lead-submit-success').remove();
+    }
+    $('#noti-message').text(message)
+}
+
+function showNotiDefault(type, title, message) {
+    modalNotiDefault.show();
+    // myModal.hide();
+    $('#noti-title-default').text(title);
+    if (type == 'success') {
+        $('#noti-icon-error-default').addClass('d-none');
+        $('#noti-icon-success-default').removeClass('d-none');
+        $('#btn-close-noti-default').text('Đóng');
+        if ($("#lead-submit-success").length === 0) {
+            $("#lead-result").append("<p id='lead-submit-success'></p>");
+        }
+    } else {
+        $('#noti-icon-success-default').addClass('d-none');
+        $('#noti-icon-error-default').removeClass('d-none');
+        $('#btn-close-noti-default').text('Quay lại');
+        $('#lead-result #lead-submit-success').remove();
+    }
+    $('#noti-message-default').text(message)
+}
+
+$("#livingPlace").change(function () {
+    if ($(this).val() == "") $(this).addClass("empty");
+    else $(this).removeClass("empty")
+});
+
+$("#livingPlace").change();
+
+$("#documentType").change(function () {
+    if ($(this).val() == "") $(this).addClass("empty");
+    else $(this).removeClass("empty")
+});
+
+$("#documentType").change();
+
+
+$('#formWebTimeCall1').click(() => {
+    $('#call-1').show();
+    $('#call-2').hide();
+    $('select[name="timeCall1"]').prop('disabled', false)
+    $('select[name="timeCall2"]').val(null);
+    if (!$('#call-2').hasClass('d-none')) {
+        $('#call-2').addClass('d-none')
     }
 
-    $("#livingPlace").change(function () {
-        if ($(this).val() == "") $(this).addClass("empty");
-        else $(this).removeClass("empty")
-    });
-
-    $("#livingPlace").change();
-
-    $("#documentType").change(function () {
-        if ($(this).val() == "") $(this).addClass("empty");
-        else $(this).removeClass("empty")
-    });
-
-    $("#documentType").change();
+});
 
 
-    $('#formWebTimeCall1').click(() => {
-        $('#call-1').show();
-        $('#call-2').hide();
-        $('select[name="timeCall1"]').prop('disabled', false)
-        $('select[name="timeCall2"]').val(null);
-        if (!$('#call-2').hasClass('d-none')) {
-            $('#call-2').addClass('d-none')
-        }
+$('#formWebTimeCall2').click(() => {
+    $('#call-1').hide();
+    $('#call-2').show();
+    $('select[name="timeCall2"]').prop('disabled', false)
+    $('select[name="timeCall1"]').val(null);
+    if ($('#call-2').hasClass('d-none')) {
+        $('#call-2').removeClass('d-none')
+    }
+})
 
-    });
+$('#formModalTimeCall1').click(() => {
+    $('#call-mobile-1').show();
+    $('#call-mobile-2').hide();
+    $('select[name="timeCall1"]').prop('disabled', false)
+    $('select[name="timeCall2"]').val(null);
+    if (!$('#call-mobile-2').hasClass('d-none')) {
+        $('#call-mobile-2').addClass('d-none')
+    }
 
-
-    $('#formWebTimeCall2').click(() => {
-        $('#call-1').hide();
-        $('#call-2').show();
-        $('select[name="timeCall2"]').prop('disabled', false)
-        $('select[name="timeCall1"]').val(null);
-        if ($('#call-2').hasClass('d-none')) {
-            $('#call-2').removeClass('d-none')
-        }
-    })
-
-    $('#formModalTimeCall1').click(() => {
-        $('#call-mobile-1').show();
-        $('#call-mobile-2').hide();
-        $('select[name="timeCall1"]').prop('disabled', false)
-        $('select[name="timeCall2"]').val(null);
-        if (!$('#call-mobile-2').hasClass('d-none')) {
-            $('#call-mobile-2').addClass('d-none')
-        }
-
-    });
+});
 
 
-    $('#formModalTimeCall2').click(() => {
-        $('#call-mobile-1').hide();
-        $('#call-mobile-2').show();
-        $('select[name="timeCall2"]').prop('disabled', false)
-        $('select[name="timeCall1"]').val(null);
-        if ($('#call-mobile-2').hasClass('d-none')) {
-            $('#call-mobile-2').removeClass('d-none')
-        }
-    })
+$('#formModalTimeCall2').click(() => {
+    $('#call-mobile-1').hide();
+    $('#call-mobile-2').show();
+    $('select[name="timeCall2"]').prop('disabled', false)
+    $('select[name="timeCall1"]').val(null);
+    if ($('#call-mobile-2').hasClass('d-none')) {
+        $('#call-mobile-2').removeClass('d-none')
+    }
+})
 
-    const rangeInput = document.getElementById('amount-rate');
-    const resultSpan = document.getElementById('amount-rate-result');
-    const amountTotal = document.getElementById('amount-total');
-    const monthRangeInput = document.getElementById('month-rate');
-    const monthResult = document.getElementById('month-rate-result');
+const rangeInput = document.getElementById('amount-rate');
+const resultSpan = document.getElementById('amount-rate-result');
+const amountTotal = document.getElementById('amount-total');
+const monthRangeInput = document.getElementById('month-rate');
+const monthResult = document.getElementById('month-rate-result');
 
 // Function to format the number as VND with commas
-    function formatVND(value) {
-        return value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
-    }
+function formatVND(value) {
+    return value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+}
 
 // Listen for the input event on the range slider
-    rangeInput.addEventListener('input', function () {
-        // Update the text content of the result span with the formatted value
-        resultSpan.textContent = formatVND(rangeInput.value);
-        amountTotal.textContent = `${formatVND(Math.round(calculatePMT(0.18 / 12, Number(monthRangeInput.value), Number(rangeInput.value)) / 1000) * 1000)} VND`;
+rangeInput.addEventListener('input', function () {
+    // Update the text content of the result span with the formatted value
+    resultSpan.textContent = formatVND(rangeInput.value);
+    amountTotal.textContent = `${formatVND(Math.round(calculatePMT(0.18 / 12, Number(monthRangeInput.value), Number(rangeInput.value)) / 1000) * 1000)} VND`;
 
-    });
-
-
-    monthRangeInput.addEventListener('input', function () {
-        // Update the text content of the result span with the formatted value
-        monthResult.textContent = monthRangeInput.value;
-        amountTotal.textContent = `${formatVND(Math.round(calculatePMT(0.18 / 12, Number(monthRangeInput.value), Number(rangeInput.value)) / 1000) * 1000)} VND`;
-
-    });
+});
 
 
-    function calculatePMT(rate, nper, pv, fv = 0, type = 0) {
-        if (rate === 0) {
-            return -(pv + fv) / nper;
-        }
+monthRangeInput.addEventListener('input', function () {
+    // Update the text content of the result span with the formatted value
+    monthResult.textContent = monthRangeInput.value;
+    amountTotal.textContent = `${formatVND(Math.round(calculatePMT(0.18 / 12, Number(monthRangeInput.value), Number(rangeInput.value)) / 1000) * 1000)} VND`;
 
-        const pvif = Math.pow(1 + rate, nper);
-        let pmt = (rate * pv * (pvif + fv)) / (pvif - 1);
+});
 
-        if (type === 1) {
-            pmt /= 1 + rate;
-        }
-
-        return pmt.toFixed();
+function calculatePMT(rate, nper, pv, fv = 0, type = 0) {
+    if (rate === 0) {
+        return -(pv + fv) / nper;
     }
+
+    const pvif = Math.pow(1 + rate, nper);
+    let pmt = (rate * pv * (pvif + fv)) / (pvif - 1);
+
+    if (type === 1) {
+        pmt /= 1 + rate;
+    }
+
+    return pmt.toFixed();
+}
 
 
 // Select all carousel elements
-    const carousels = document.querySelectorAll('.carousel');
+const carousels = document.querySelectorAll('.carousel');
 
 // Loop through each carousel element
-    carousels.forEach(carouselElement => {
-        const carousel = new bootstrap.Carousel(carouselElement, {
-            interval: 2000, // Adjust your interval timing here
-            ride: false // Disable automatic riding on page load to control it manually
-        });
-
-        // Create the IntersectionObserver for each carousel
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    // If the carousel is in the viewport, resume autoplay
-                    carousel.cycle();
-                } else {
-                    // If the carousel is out of the viewport, pause autoplay
-                    carousel.pause();
-                }
-            });
-        }, {
-            threshold: 0.5 // Trigger when 50% of the carousel is in the viewport
-        });
-
-        // Observe the current carousel element
-        observer.observe(carouselElement);
+carousels.forEach(carouselElement => {
+    const carousel = new bootstrap.Carousel(carouselElement, {
+        interval: 2000, // Adjust your interval timing here
+        ride: false // Disable automatic riding on page load to control it manually
     });
 
+    // Create the IntersectionObserver for each carousel
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                // If the carousel is in the viewport, resume autoplay
+                carousel.cycle();
+            } else {
+                // If the carousel is out of the viewport, pause autoplay
+                carousel.pause();
+            }
+        });
+    }, {
+        threshold: 0.5 // Trigger when 50% of the carousel is in the viewport
+    });
 
-
+    // Observe the current carousel element
+    observer.observe(carouselElement);
+});
 
 
