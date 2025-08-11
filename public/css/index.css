@@ -681,7 +681,7 @@ body .footer-end {
         border-color: rgb(219, 3, 110);
         position: relative;
         height: 590px;
-        margin-top: 60px !important;
+        /*margin-top: 60px !important;*/
     }
 
     .banner {
