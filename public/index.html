@@ -61,16 +61,7 @@
         <div class="banner-slider-background">
             <div class="slider-wrapper">
                 <div class="slider">
-                    <div class="slide slide-video">
-                        <video class="d-none d-md-block" autoplay loop muted playsinline>
-                            <source src="./images/slide-bn-2.mp4" type="video/mp4">
-                        </video>
-                        <!-- Video cho Mobile -->
-                        <video class="d-block d-md-none" autoplay loop muted playsinline>
-                            <source src="./images/slide-bn-mb-2.mp4" type="video/mp4">
-                        </video>
-                    </div>
-                    <!--                    <img src="./images/vay4buocmb.gif" alt="Banner Animation" class="mobile-gif">-->
+                    <div class="slide slide-gif" aria-label="GIF demo"></div>
                     <div class="slide slide-static"></div>
                 </div>
             </div>
@@ -2231,10 +2222,11 @@
         .slider {
             display: flex;
             height: 100%;
-            transition: transform 0.5s ease-in-out;
+            /*transition: transform 0.5s ease-in-out;*/
         }
 
         .slide {
+            width: 100%;
             height: 100%;
             background-size: cover;
             background-position: center;
@@ -2244,6 +2236,10 @@
 
         /* --- Cấu hình cho Desktop --- */
         @media (min-width: 768px) {
+            .slide-gif {
+                background-image: url("./images/slide-bn-2.gif");
+            }
+
             .slide-video {
                 position: relative;
                 /*background-color: #FFFFFF;*/
@@ -2280,6 +2276,11 @@
             .slide-video video.d-block.d-md-none {
                 display: block !important;
             }
+
+            .slide-gif {
+                background-image: url("./images/slide-bn-2-mb.gif");
+            }
+
             .slide-static {
 
                 background-image: url('./images/banner-mobile-new.jpg');
@@ -2943,67 +2944,67 @@
         document.addEventListener("DOMContentLoaded", function() {
 
             //BANNER SLIDER
-            const bannerSection = document.querySelector('section.banner');
-            if (bannerSection) {
-                const slider = bannerSection.querySelector('.slider');
-                const slides = Array.from(bannerSection.querySelectorAll('.slide'));
-                if (slider && slides.length > 0) {
-                    const firstClone = slides[0].cloneNode(true);
-                    const lastClone = slides[slides.length - 1].cloneNode(true);
-                    slider.appendChild(firstClone);
-                    slider.insertBefore(lastClone, slides[0]);
-
-                    const allSlides = slider.querySelectorAll('.slide');
-                    const slideCount = allSlides.length;
-                    slider.style.width = `${100 * slideCount}%`;
-                    allSlides.forEach(slide => {
-                        slide.style.width = `${100 / slideCount}%`;
-                    });
-
-                    let currentIndex = 1;
-                    let isTransitioning = false;
-
-                    function updateSliderPosition(withTransition = true) {
-                        if (!withTransition) slider.style.transition = 'none';
-                        const offset = -(100 / slideCount) * currentIndex;
-                        slider.style.transform = `translateX(${offset}%)`;
-                        if (!withTransition) {
-                            slider.offsetHeight;
-                            slider.style.transition = 'transform 0.5s ease-in-out';
-                        }
-                    }
-
-                    slider.addEventListener('transitionend', () => {
-                        isTransitioning = false;
-                        if (currentIndex === 0) {
-                            currentIndex = slideCount - 2;
-                            updateSliderPosition(false);
-                        }
-                        if (currentIndex === slideCount - 1) {
-                            currentIndex = 1;
-                            updateSliderPosition(false);
-                        }
-                    });
-
-                    function moveToNext() {
-                        if (isTransitioning) return;
-                        isTransitioning = true;
-                        currentIndex++;
-                        updateSliderPosition();
-                    }
-
-
-                    let autoSlideInterval = null;
-                    function startAutoSlide() {
-                        if (autoSlideInterval) clearInterval(autoSlideInterval);
-                        autoSlideInterval = setInterval(moveToNext, 5000);
-                    }
-
-                    startAutoSlide();
-                    window.addEventListener('resize', startAutoSlide);
-                    updateSliderPosition(false);
-                }
-            }
+            // const bannerSection = document.querySelector('section.banner');
+            // if (bannerSection) {
+            //     const slider = bannerSection.querySelector('.slider');
+            //     const slides = Array.from(bannerSection.querySelectorAll('.slide'));
+            //     if (slider && slides.length > 0) {
+            //         const firstClone = slides[0].cloneNode(true);
+            //         const lastClone = slides[slides.length - 1].cloneNode(true);
+            //         slider.appendChild(firstClone);
+            //         slider.insertBefore(lastClone, slides[0]);
+            //
+            //         const allSlides = slider.querySelectorAll('.slide');
+            //         const slideCount = allSlides.length;
+            //         slider.style.width = `${100 * slideCount}%`;
+            //         allSlides.forEach(slide => {
+            //             slide.style.width = `${100 / slideCount}%`;
+            //         });
+            //
+            //         let currentIndex = 1;
+            //         let isTransitioning = false;
+            //
+            //         function updateSliderPosition(withTransition = true) {
+            //             if (!withTransition) slider.style.transition = 'none';
+            //             const offset = -(100 / slideCount) * currentIndex;
+            //             slider.style.transform = `translateX(${offset}%)`;
+            //             if (!withTransition) {
+            //                 slider.offsetHeight;
+            //                 slider.style.transition = 'transform 0.5s ease-in-out';
+            //             }
+            //         }
+            //
+            //         slider.addEventListener('transitionend', () => {
+            //             isTransitioning = false;
+            //             if (currentIndex === 0) {
+            //                 currentIndex = slideCount - 2;
+            //                 updateSliderPosition(false);
+            //             }
+            //             if (currentIndex === slideCount - 1) {
+            //                 currentIndex = 1;
+            //                 updateSliderPosition(false);
+            //             }
+            //         });
+            //
+            //         function moveToNext() {
+            //             if (isTransitioning) return;
+            //             isTransitioning = true;
+            //             currentIndex++;
+            //             updateSliderPosition();
+            //         }
+            //
+            //
+            //         let autoSlideInterval = null;
+            //         function startAutoSlide() {
+            //             if (autoSlideInterval) clearInterval(autoSlideInterval);
+            //             autoSlideInterval = setInterval(moveToNext, 5000);
+            //         }
+            //
+            //         startAutoSlide();
+            //         window.addEventListener('resize', startAutoSlide);
+            //         updateSliderPosition(false);
+            //     }
+            // }
 
 
             //BỘ ĐẾM kh

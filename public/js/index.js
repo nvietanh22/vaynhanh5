@@ -592,7 +592,6 @@ function startCountdown() {
 
 }
 
-
 function changeStyleDropdown(arr) {
     arr.forEach(item => {
         $(`#${item.id}`).removeAttr('style')
@@ -666,7 +665,6 @@ $('#formWebTimeCall1').click(() => {
 
 });
 
-
 $('#formWebTimeCall2').click(() => {
     $('#call-1').hide();
     $('#call-2').show();
@@ -688,7 +686,6 @@ $('#formModalTimeCall1').click(() => {
 
 });
 
-
 $('#formModalTimeCall2').click(() => {
     $('#call-mobile-1').hide();
     $('#call-mobile-2').show();
@@ -705,22 +702,17 @@ const amountTotal = document.getElementById('amount-total');
 const monthRangeInput = document.getElementById('month-rate');
 const monthResult = document.getElementById('month-rate-result');
 
-// Function to format the number as VND with commas
 function formatVND(value) {
     return value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 }
 
-// Listen for the input event on the range slider
 rangeInput.addEventListener('input', function () {
-    // Update the text content of the result span with the formatted value
     resultSpan.textContent = formatVND(rangeInput.value);
     amountTotal.textContent = `${formatVND(Math.round(calculatePMT(0.18 / 12, Number(monthRangeInput.value), Number(rangeInput.value)) / 1000) * 1000)} VND`;
 
 });
 
-
 monthRangeInput.addEventListener('input', function () {
-    // Update the text content of the result span with the formatted value
     monthResult.textContent = monthRangeInput.value;
     amountTotal.textContent = `${formatVND(Math.round(calculatePMT(0.18 / 12, Number(monthRangeInput.value), Number(rangeInput.value)) / 1000) * 1000)} VND`;
 
@@ -730,44 +722,31 @@ function calculatePMT(rate, nper, pv, fv = 0, type = 0) {
     if (rate === 0) {
         return -(pv + fv) / nper;
     }
-
     const pvif = Math.pow(1 + rate, nper);
     let pmt = (rate * pv * (pvif + fv)) / (pvif - 1);
-
     if (type === 1) {
         pmt /= 1 + rate;
     }
-
     return pmt.toFixed();
 }
 
-
-// Select all carousel elements
 const carousels = document.querySelectorAll('.carousel');
-
-// Loop through each carousel element
 carousels.forEach(carouselElement => {
     const carousel = new bootstrap.Carousel(carouselElement, {
-        interval: 2000, // Adjust your interval timing here
-        ride: false // Disable automatic riding on page load to control it manually
+        interval: 2000,
+        ride: false
     });
-
-    // Create the IntersectionObserver for each carousel
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                // If the carousel is in the viewport, resume autoplay
                 carousel.cycle();
             } else {
-                // If the carousel is out of the viewport, pause autoplay
                 carousel.pause();
             }
         });
     }, {
-        threshold: 0.5 // Trigger when 50% of the carousel is in the viewport
+        threshold: 0.5
     });
-
-    // Observe the current carousel element
     observer.observe(carouselElement);
 });
 
