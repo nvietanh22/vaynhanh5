@@ -66,6 +66,15 @@
                 </div>
             </div>
         </div>
+        <div id="customer-counter-banner-mobile">
+            <div id="customer-counter-inner">
+                <img src="./images/icon-cash-inhand.png" alt="Happy customer icon" class="counter-icon">
+                <div class="counter-text-group">
+                    <div id="scrolling-counter-banner-mobile" class="scrolling-counter"></div> <!-- Và đổi id ở đây -->
+                    <p class="counter-text">Khách hàng đã đăng ký vay tại LOTTE Finance</p>
+                </div>
+            </div>
+        </div>
         <div id="banner-form-web">
             <div class="row">
                 <div class="col-md-6">
@@ -2606,6 +2615,14 @@
             left: 40px;
             bottom: 15px;
         }
+        @media (min-width: 768px) {
+            #customer-counter-banner-mobile {
+                display: none; /* Ẩn phiên bản mobile trên desktop */
+            }
+            #customer-counter-wrapper {
+                display: block; /* Hiện phiên bản desktop */
+            }
+        }
 
         #customer-counter-inner {
             display: flex;
@@ -2834,17 +2851,53 @@
             }
 
             #customer-counter-wrapper {
+                display: none !important;
+            }
+
+            /* Thêm padding cho banner để có chỗ cho bộ đếm */
+            .banner {
+                /* ... các style banner mobile khác ... */
+                padding-bottom: 50px;
+            }
+
+            /* Định vị cho phiên bản mobile */
+            #customer-counter-banner-mobile {
+                display: block;
                 position: absolute;
                 z-index: 10;
                 padding: 3px;
                 border-radius: 100px;
                 background: linear-gradient(to right, #CC002E, #EC1848, #9A268F);
                 box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
-                /*bottom: 10780px;*/
-                bottom: 150px;
+                bottom: 20px;
                 left: 50%;
                 transform: translateX(-50%);
             }
+
+            /* Copy style từ #customer-counter-inner để đảm bảo hiển thị đúng */
+            #customer-counter-banner-mobile #customer-counter-inner {
+                display: flex;
+                align-items: center;
+                gap: 15px;
+                background-color: #fff;
+                padding: 12px 17px;
+                border-radius: inherit;
+                width: 214px;
+                height: 71.76px;
+            }
+
+            /*#customer-counter-wrapper {*/
+            /*    position: absolute;*/
+            /*    z-index: 10;*/
+            /*    padding: 3px;*/
+            /*    border-radius: 100px;*/
+            /*    background: linear-gradient(to right, #CC002E, #EC1848, #9A268F);*/
+            /*    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);*/
+            /*    !*bottom: 10780px;*!*/
+            /*    bottom: 150px;*/
+            /*    left: 50%;*/
+            /*    transform: translateX(-50%);*/
+            /*}*/
 
         }
 
@@ -3009,8 +3062,8 @@
 
             //BỘ ĐẾM kh
             const initializeCounter = (widgetSelector, containerSelector) => {
-                const counterWidget = document.getElementById('customer-counter-wrapper');
-                const counterContainer = document.getElementById('scrolling-counter');
+                const counterWidget = document.querySelector(widgetSelector);
+                const counterContainer = document.querySelector(containerSelector)
                 let continuousUpdateInterval = null;
 
                 if (counterWidget && counterContainer) {
@@ -3101,7 +3154,7 @@
             };
 
             initializeCounter('#customer-counter-wrapper', '#scrolling-counter');
-            initializeCounter('#customer-counter-wrapper-mobile', '#scrolling-counter-mobile');
+            initializeCounter('#customer-counter-banner-mobile', '#scrolling-counter-banner-mobile');
 
             //LẬT CARD TỰ ĐỘNG TRÊN MOBILE
             const mobileLoanCarousel = document.getElementById('loan-product-control');
