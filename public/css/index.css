@@ -821,14 +821,23 @@ body .footer-end {
         left: 10px;
     }
 
+    /*#amount-rate-body {*/
+    /*    border: 1px solid;*/
+    /*    width: 10rem;*/
+    /*    float: right;*/
+    /*    text-align: center;*/
+    /*    border-radius: 3px;*/
+    /*    padding: 5px;*/
+    /*    border-color: red;*/
+    /*}*/
+
     #amount-rate-body {
         border: 1px solid;
-        width: 10rem;
-        float: right;
         text-align: center;
         border-radius: 3px;
         padding: 5px;
         border-color: red;
+        min-width: 170px;
     }
 
     #month-rate-body {
@@ -1155,10 +1164,18 @@ body .footer-end {
         width: 360px;
     }
 
+    /*#amount-rate-body {*/
+    /*    border: 1px solid;*/
+    /*    width: 50%;*/
+    /*    float: right;*/
+    /*    text-align: center;*/
+    /*    border-radius: 3px;*/
+    /*    padding: 5px;*/
+    /*    border-color: red;*/
+    /*}*/
+
     #amount-rate-body {
         border: 1px solid;
-        width: 50%;
-        float: right;
         text-align: center;
         border-radius: 3px;
         padding: 5px;
