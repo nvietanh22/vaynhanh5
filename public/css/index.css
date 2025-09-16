@@ -126,6 +126,13 @@ video {
     background-color: transparent !important;
 }
 
+.warning-text {
+    color: #e7252b;
+    font-weight: bold;
+    /*margin-top: 8px;*/
+    font-size: 10px;
+}
+
 .loan-estimate{
     color: #999999;
 }
@@ -304,6 +311,17 @@ body .footer-end {
 }
 
 @media (max-width: 767px) {
+
+    .navbar-mobile-fixed {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 999;
+        background: #f8f9fa;
+        border-bottom: 1px solid #ddd;
+        height: 50px;
+    }
 
     .carousel-item {
         display: flex;
@@ -680,7 +698,7 @@ body .footer-end {
         border-style: solid;
         border-color: rgb(219, 3, 110);
         position: relative;
-        height: 590px;
+        height: 620px;
         /*margin-top: 60px !important;*/
     }
 
@@ -1094,7 +1112,7 @@ body .footer-end {
     }
 
     .banner {
-        height: 614px;
+        height: 650px;
         background-image: url('../images/banner.png');
         background-position: center;
         background-size: cover;
@@ -1128,7 +1146,7 @@ body .footer-end {
         border-color: rgb(219, 3, 110);
         position: relative;
         left: 3rem;
-        height: 570px;
+        height: 605px;
     }
 
     .loan-simulate-body {
