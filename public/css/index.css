@@ -913,6 +913,9 @@ body .footer-end {
 }
 
 @media (min-width: 768px) {
+    body {
+        padding-top: 68px;
+    }
     #btn-header-regist {
         display: block;
     }
